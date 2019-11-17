@@ -1,0 +1,11 @@
+---
+system:
+build:
+  - boost
+  - boost-module
+  - boost-latest
+  - boost-module-latest
+  - fftw
+  - fftw-module
+manifest:
+  - "{{ build }}"
