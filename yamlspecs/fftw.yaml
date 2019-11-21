@@ -1,15 +1,14 @@
+!include /opt/rcic/include/rcic-package.yaml
 ---
 - package: fftw 
   name: fftw
   versions: !include versions.yaml
-  version: "{{ versions.fftw}}"
-  extension: tar.gz
+  version: "{{versions.fftw}}"
   vendor_source: http://www.fftw.org/{{name}}-{{version}}.{{extension}}
   description: |
     FFTW is a C subroutine library for computing the discrete Fourier transform (DFT)
     in one or more dimensions, of arbitrary input size, and of both real and complex 
-    data (as well as of even/odd data, i.e. the discrete cosine/sine transforms or DCT/DST). 
-  root: "{{ pkg_defaults.app_path }}/{{ name }}/{{ version }}"
+    data as well as of even/odd data, i.e. the discrete cosine/sine transforms or DCT/DST
   build:
     configure_args: >
       --prefix={{root}} 
@@ -23,5 +22,3 @@
     target: 
   install:
     makeinstall: $(MAKE) DESTDIR=$(ROOT) install
-  files:
-    -  "{{ root }}"

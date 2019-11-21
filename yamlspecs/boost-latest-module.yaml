@@ -1,4 +1,4 @@
-# Builds the module for boost.
+# Builds the module for boost latest version.
 !include boost.yaml
 !include /opt/rcic/include/rcic-module.yaml
 ---
@@ -6,8 +6,7 @@
   category: TOOLS
   pkgname: "{{name}}_{{version}}_{{compiler}}_{{compiler_version}}-module"
   specs: "{{compiler}}.{{compiler_version}}"
-  version: "{{ versions.boost.ver_latest }}"
-  version_enc: "{{ versions.boost.enc}}"
+  version: "{{versions.boost.ver_latest}}"
   module:
     logname: "{{name}}/{{version}}/{{compiler}}{{compiler_version}}"
     name: "{{specs}}"
