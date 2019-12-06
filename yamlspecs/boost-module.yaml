@@ -7,10 +7,11 @@
   pkgname: "{{name}}_{{version}}_{{compiler}}_{{compiler_version}}-module"
   specs: "{{compiler}}.{{compiler_version}}"
   release: 2
+  modinstdir: "{{pkg_defaults.module.RCICmpath}}/{{category}}/{{name}}"
   module:
     logname: "{{name}}/{{version}}/{{compiler}}{{compiler_version}}"
     name: "{{specs}}"
-    path: "{{pkg_defaults.module.RCICmpath}}/{{category}}/{{name}}/{{version}}"
+    path: "{{modinstdir}}/{{version}}"
     setenv:
       - BOOST_HOME {{root}}
     prereq:
@@ -18,3 +19,5 @@
   requires:
     - "{{name}}_{{version}}_{{compiler}}_{{compiler_version}}"
     - rcic-module-support
+  files:
+    -  "{{modinstdir}}"
