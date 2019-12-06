@@ -1,6 +1,6 @@
 # Builds the module for boost.
 !include boost.yaml
-!include /opt/rcic/include/rcic-module.yaml
+!include rcic-module.yaml
 ---
 - package: boost Module
   category: TOOLS

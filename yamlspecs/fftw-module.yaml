@@ -1,6 +1,6 @@
 # Build the module for fftw. 
 !include fftw.yaml
-!include /opt/rcic/include/rcic-module.yaml
+!include rcic-module.yaml
 ---
 - package: fftw Module
   category: TOOLS
