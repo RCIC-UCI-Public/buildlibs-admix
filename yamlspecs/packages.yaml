@@ -4,7 +4,7 @@ build:
   - boost
   - boost-module
   - boost-latest
-  - boost-module-latest
+  - boost-latest-module
   - fftw
   - fftw-module
 manifest:
