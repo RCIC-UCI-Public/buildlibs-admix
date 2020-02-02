@@ -6,11 +6,10 @@
   category: TOOLS
   module:
     prepend_path:
-      - "{{pkg_defaults.module.prepend_path}}"
-      - -d " " LDFLAGS "-Wl,-rpath,{{root}}/lib" 
-      - -d " " LDFLAGS "-L{{root}}/lib" 
-      - -d " " CPPFLAGS "-I{{root}}/include"
+      - "{{mod_defaults.prepend_path}}"
+      - "{{mod_defaults.flagspath}}"
     setenv:
-      - FFTW_DIR  {{root}}
-      - FFTW_INC  {{root}}/include
-      - FFTW_LIB  {{root}}/lib
+      - "{{mod_defaults.setenv}}"
+      - FFTW_DIR {{root}}
+      - FFTW_INC {{root}}/include
+      - FFTW_LIB {{root}}/lib
