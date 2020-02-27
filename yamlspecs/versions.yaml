@@ -7,3 +7,13 @@ boost:
   enc_latest: "1_71_0"
   compiler: "gcc"
   compiler_version: "8.3.0"
+mpi:
+  compiler: "gcc"
+  compiler_version: "8.3.0"
+openmpi:
+  version: "4.0.2"
+  major: "4.0"
+mpich:
+  version: "3.3.2"
+ucx: "1.6.1"
+singularity: "3.4.1"

@@ -1,5 +1,11 @@
 ---
 system:
+  - numactl-devel
+  - hwloc-devel
+  - libibverbs-devel
+  - libpciaccess-devel
+bootstrap:
+  - ucx
 build:
   - boost
   - boost-module
@@ -7,5 +13,10 @@ build:
   - boost-latest-module
   - fftw
   - fftw-module
+  - openmpi
+  - openmpi-module
+  - mpich
+  - mpich-module
 manifest:
   - "{{build}}"
+  - "{{bootstrap}}"

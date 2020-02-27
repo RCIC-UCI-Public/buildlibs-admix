@@ -1,0 +1,24 @@
+!include rcic-package.yaml
+---
+- package: ucx 
+  name: ucx
+  versions: !include versions.yaml
+  version: "{{versions.ucx}}"
+  vendor_source: https://github.com/openucx/ucx/archive/v{{version}}.{{extension}}
+  description: |
+    Unified Communication X (UCX) version {{version}} provides an optimized communication layer for Message Passing (MPI), 
+    PGAS/OpenSHMEM libraries and RPC/data-centric applications.
+
+    UCX utilizes high-speed networks for inter-node communication, and shared memory mechanisms for efficient intra-node communication.
+  build:
+    preconfigure: ./autogen.sh
+    configure_args: >   
+       --with-rc 
+       --with-ud     
+       --with-dc             
+       --with-ib-hw-tm        
+       --with-dm               
+    modules:
+  install:
+    makeinstall: $(MAKE) DESTDIR=$(ROOT) install
+  rpm: !include rpm.extras.yaml
