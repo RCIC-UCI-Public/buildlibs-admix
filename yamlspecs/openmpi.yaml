@@ -1,0 +1,36 @@
+!include rcic-package.yaml
+---
+- package: openmpi 
+  name: openmpi
+  versions: !include versions.yaml
+  version: "{{versions.openmpi.version}}"
+  version_major: "{{versions.openmpi.major}}"
+  vendor_source: https://download.open-mpi.org/release/open-mpi/v{{version_major}}/{{name}}-{{version}}.{{extension}}
+  ucxpath: "{{pkg_defaults.app_path}}/ucx/{{versions.ucx}}"
+  pkgname: "{{name}}_{{version}}_{{compiler}}_{{compiler_version}}"
+  root: "{{parent}}/{{version}}/{{compiler}}/{{compiler_version}}"
+
+  compiler: "{{versions.mpi.compiler}}"
+  compiler_version: "{{versions.mpi.compiler_version}}"
+  addfile: mpiconfig.sh
+  description: |
+      OpenMPI version {{ version }} compiled with UCX {{versions.ucx}}.
+
+      The Open MPI Project is an open source Message Passing Interface implementation that is developed and maintained 
+      by a consortium of academic, research, and industry partners. Open MPI is therefore able to combine 
+      the expertise, technologies, and resources from all across the High Performance Computing community in order to 
+      build the best MPI library available. Open MPI offers advantages for system and software vendors, 
+      application developers and computer science researchers
+
+  build:
+    configure: ../mpiconfig.sh 
+    configure_args: --prefix={{root}} --with-verbs --with-hwloc=internal --with-singularity=$$singularity__PREFIX --with-ucx={{ucxpath}} 
+    modules: 
+      - "{{compiler}}/{{compiler_version}}"
+      - "singularity/{{versions.singularity}}"
+    target: 
+  install:
+    makeinstall: unset F90; $(MAKE) DESTDIR=$(ROOT) install
+  requires:
+      - "ucx_{{versions.ucx}}"
+      - "{{compiler}}_{{compiler_version}}"
