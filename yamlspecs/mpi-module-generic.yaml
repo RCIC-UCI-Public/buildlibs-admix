@@ -1,8 +1,7 @@
 # Builds the module for mpich.
-!include mpich.yaml
 !include rcic-module.yaml
 ---
-- package: mpich module 
+- package: mpi generic module
   pkgname: "{{name}}_{{version}}_{{compiler}}_{{compiler_version}}-module"
   category: COMPILERS
   specs: "{{compiler}}.{{compiler_version}}"
