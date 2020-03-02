@@ -10,13 +10,17 @@
     PGAS/OpenSHMEM libraries and RPC/data-centric applications.
 
     UCX utilizes high-speed networks for inter-node communication, and shared memory mechanisms for efficient intra-node communication.
+  addfile: mpiconfig.sh
   build:
     preconfigure: ./autogen.sh
+    configure: CFLAGS="-Wno-error" ../mpiconfig.sh
     configure_args: >   
+       --prefix={{root}}
        --with-rc 
        --with-ud     
        --with-dc             
        --with-ib-hw-tm        
        --with-dm               
+    pkgmake: sed -i '/\#define VERSION/d' config.h; make
   install:
     makeinstall: $(MAKE) DESTDIR=$(ROOT) install
