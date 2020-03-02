@@ -18,7 +18,5 @@
        --with-dc             
        --with-ib-hw-tm        
        --with-dm               
-    modules:
   install:
     makeinstall: $(MAKE) DESTDIR=$(ROOT) install
-  rpm: !include rpm.extras.yaml
