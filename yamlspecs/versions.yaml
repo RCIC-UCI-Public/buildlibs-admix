@@ -6,10 +6,10 @@ boost:
   ver_latest: "1.71.0"
   enc_latest: "1_71_0"
   compiler: "gcc"
-  compiler_version: "8.3.0"
+  compiler_version: "8.4.0"
 mpi:
   compiler: "gcc"
-  compiler_version: "8.3.0"
+  compiler_version: "8.4.0"
 openmpi:
   version: "4.0.2"
   major: "4.0"
