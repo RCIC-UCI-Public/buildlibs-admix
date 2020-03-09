@@ -11,7 +11,7 @@ mpi:
   compiler: "gcc"
   compiler_version: "8.4.0"
 openmpi:
-  version: "4.0.2"
+  version: "4.0.3"
   major: "4.0"
 mpich:
   version: "3.3.2"

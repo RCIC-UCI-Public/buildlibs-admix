@@ -29,6 +29,7 @@
       - "{{compiler}}/{{compiler_version}}"
       - "singularity/{{versions.singularity}}"
     target: 
+    pkgmake: make -j 8
   install:
     makeinstall: unset F90; $(MAKE) DESTDIR=$(ROOT) install
   requires:
