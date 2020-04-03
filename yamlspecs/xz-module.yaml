@@ -1,0 +1,9 @@
+# Builds the module for xz.
+!include xz.yaml
+!include rcic-module.yaml
+---
+- package: xz Module
+  category: TOOLS
+  module:
+    prereq:
+      - "{{compiler}}/{{compiler_version}}"

@@ -16,3 +16,5 @@ openmpi:
 mpich: "3.3.2"
 ucx: "1.6.1"
 singularity: "3.4.1"
+xz: "5.2.4"
+protobuf: "3.11.4"
