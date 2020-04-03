@@ -7,4 +7,5 @@ cache/
 localrepo/
 yamlspecs/tmpbuild/
 yum.*
-tmpbuild/*.pkg
+*.pkg
+.rpmmacros
