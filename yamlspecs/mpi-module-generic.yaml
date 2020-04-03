@@ -1,19 +1,9 @@
 # Builds the module for mpich.
-!include rcic-module.yaml
+!include rcic-module-spec.yaml
 ---
 - package: mpi generic module
-  pkgname: "{{name}}_{{version}}_{{compiler}}_{{compiler_version}}-module"
   category: COMPILERS
-  specs: "{{compiler}}.{{compiler_version}}"
-  modinstdir: "{{mod_defaults.path}}"
   module:
-    name: "{{specs}}"
-    loadname: "{{module.logname}}" 
-    logname: "{{name}}/{{version}}/{{specs}}"
-    path: "{{modinstdir}}/{{version}}"
-    prepend_path:
-      - "{{mod_defaults.prepend_path}}"
-      - "{{mod_defaults.flagspath}}"
     setenv:
       - "{{mod_defaults.setenv}}"
       - MPI_BIN {{root}}/bin
@@ -23,10 +13,3 @@
       - MPI_LIB {{root}}/lib
       - MPI_MAN {{root}}/share/man/
       - MPI_HOME {{root}}
-    prereq:
-      - "{{compiler}}/{{compiler_version}}" 
-  requires:
-    - "{{name}}_{{version}}_{{compiler}}_{{compiler_version}}"
-    - rcic-module-support
-  files:
-    - "{{modinstdir}}"
