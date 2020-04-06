@@ -17,6 +17,10 @@ build:
   - openmpi-module
   - mpich
   - mpich-module
+  - protobuf
+  - protobuf-module
+  - xz
+  - xz-module
 manifest:
   - "{{build}}"
   - "{{bootstrap}}"

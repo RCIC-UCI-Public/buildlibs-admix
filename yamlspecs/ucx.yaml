@@ -6,10 +6,10 @@
   version: "{{versions.ucx}}"
   vendor_source: https://github.com/openucx/ucx/archive/v{{version}}.{{extension}}
   description: |
-    Unified Communication X (UCX) version {{version}} provides an optimized communication layer for Message Passing (MPI), 
-    PGAS/OpenSHMEM libraries and RPC/data-centric applications.
-
-    UCX utilizes high-speed networks for inter-node communication, and shared memory mechanisms for efficient intra-node communication.
+    Unified Communication X (UCX) version {{version}} provides an optimized communication
+    layer for Message Passing (MPI), PGAS/OpenSHMEM libraries and RPC/data-centric
+    applications. UCX utilizes high-speed networks for inter-node communication, and
+    shared memory mechanisms for efficient intra-node communication.
   addfile: mpiconfig.sh
   build:
     preconfigure: ./autogen.sh

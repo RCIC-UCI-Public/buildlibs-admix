@@ -1,4 +1,7 @@
 ---
+compiler: "gcc"
+compiler_version: "8.4.0"
+compiler_system: "4.8.5"
 fftw: "3.3.8"
 boost:
   ver: "1.66.0"
@@ -7,13 +10,11 @@ boost:
   enc_latest: "1_71_0"
   compiler: "gcc"
   compiler_version: "8.4.0"
-mpi:
-  compiler: "gcc"
-  compiler_version: "8.4.0"
 openmpi:
   version: "4.0.3"
   major: "4.0"
-mpich:
-  version: "3.3.2"
+mpich: "3.3.2"
 ucx: "1.6.1"
 singularity: "3.4.1"
+xz: "5.2.4"
+protobuf: "3.11.4"

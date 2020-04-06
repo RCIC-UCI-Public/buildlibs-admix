@@ -3,17 +3,17 @@
 - package: mpich 
   name: mpich
   versions: !include versions.yaml
-  version: "{{versions.mpich.version}}"
+  version: "{{versions.mpich}}"
   vendor_source: http://www.mpich.org/static/downloads/{{version}}/{name}}-{{version}}.{{extension}}
   ucxpath: "{{pkg_defaults.app_path}}/ucx/{{versions.ucx}}"
   pkgname: "{{name}}_{{version}}_{{compiler}}_{{compiler_version}}"
   root: "{{parent}}/{{version}}/{{compiler}}/{{compiler_version}}"
 
-  compiler: "{{versions.mpi.compiler}}"
-  compiler_version: "{{versions.mpi.compiler_version}}"
+  compiler: "{{versions.compiler}}"
+  compiler_version: "{{versions.compiler_version}}"
   addfile: mpiconfig.sh
   description: |
-      MPICH version {{ version }} compiled with UCX {{versions.ucx}}.
+      MPICH version {{version}} compiled with UCX {{versions.ucx}}.
       MPICH is a high-performance and widely portable implementation of the
       MPI-3.1 standard from the Argonne National Laboratory.  This release
       has all MPI 3.1 functions and features required by the standard with
