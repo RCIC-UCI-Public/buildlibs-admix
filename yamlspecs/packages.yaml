@@ -24,3 +24,4 @@ build:
 manifest:
   - "{{build}}"
   - "{{bootstrap}}"
+  - "{{system}}"
