@@ -5,11 +5,12 @@
 - package: fftw Module
   category: TOOLS
   module:
+    <<: *Module
     prepend_path:
-      - "{{mod_defaults.prepend_path}}"
-      - "{{mod_defaults.flagspath}}"
+      - *Prepend_path
+      - *Flagspath
     setenv:
-      - "{{mod_defaults.setenv}}"
+      - *Setenv
       - FFTW_DIR {{root}}
       - FFTW_INC {{root}}/include
       - FFTW_LIB {{root}}/lib

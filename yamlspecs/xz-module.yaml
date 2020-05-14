@@ -5,5 +5,8 @@
 - package: xz Module
   category: TOOLS
   module:
-    prereq:
-      - "{{compiler}}/{{compiler_version}}"
+    <<: *Module
+    prereq: 
+      - *ModuleCompiler_prereq
+    requires:
+      - *ModuleCompiler_requires

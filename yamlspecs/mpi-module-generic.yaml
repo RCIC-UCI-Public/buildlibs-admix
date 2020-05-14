@@ -1,11 +1,12 @@
 # Builds the module for mpich.
-!include rcic-module-spec.yaml
+!include rcic-module.yaml
 ---
 - package: mpi generic module
   category: COMPILERS
   module:
+    <<: *ModuleCompiler
     setenv:
-      - "{{mod_defaults.setenv}}"
+      - *Setenv
       - MPI_BIN {{root}}/bin
       - MPI_SYSCONFIG {{root}}/etc
       - MPI_FORTRAN_MOD_DIR {{root}}/lib

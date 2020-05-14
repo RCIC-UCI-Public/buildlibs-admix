@@ -1,7 +1,8 @@
-!include /opt/rcic/include/rcic-package.yaml
+!include rcic-package.yaml
 ---
 - package: boost 
   name: boost 
+  baserpm: "{{name}}_{{version}}_{{compiler}}_{{compiler_version}}"
   versions: !include versions.yaml
   version: "{{versions.boost.ver}}"
   version_enc: "{{versions.boost.enc}}"
@@ -16,7 +17,6 @@
     applications. The Boost license encourages both commercial and non-commercial use and 
     does not require attribution for binary use. 
     Environment variable BOOST_HOME={{root}}
-  pkgname: "{{name}}_{{version}}_{{compiler}}_{{compiler_version}}"
   src_tarball: "{{name}}_{{version_enc}}.{{extension}}"
   src_dir: "{{name}}_{{version_enc}}"
   root: "{{pkg_defaults.app_path}}/{{name}}/{{version}}/{{compiler}}/{{compiler_version}}"

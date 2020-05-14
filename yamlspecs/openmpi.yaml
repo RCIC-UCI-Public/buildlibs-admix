@@ -2,12 +2,12 @@
 ---
 - package: openmpi 
   name: openmpi
+  baserpm: "{{name}}_{{version}}_{{compiler}}_{{compiler_version}}"
   versions: !include versions.yaml
   version: "{{versions.openmpi.version}}"
   version_major: "{{versions.openmpi.major}}"
   vendor_source: https://download.open-mpi.org/release/open-mpi/v{{version_major}}/{{name}}-{{version}}.{{extension}}
   ucxpath: "{{pkg_defaults.app_path}}/ucx/{{versions.ucx}}"
-  pkgname: "{{name}}_{{version}}_{{compiler}}_{{compiler_version}}"
   root: "{{parent}}/{{version}}/{{compiler}}/{{compiler_version}}"
 
   compiler: "{{versions.compiler}}"

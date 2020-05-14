@@ -1,5 +1,3 @@
 # Builds the module for mpich.
 !include mpich.yaml
 !include mpi-module-generic.yaml
----
-- package: mpich module 

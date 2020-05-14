@@ -2,13 +2,12 @@
 ---
 - package: mpich 
   name: mpich
+  baserpm: "{{name}}_{{version}}_{{compiler}}_{{compiler_version}}"
   versions: !include versions.yaml
   version: "{{versions.mpich}}"
   vendor_source: http://www.mpich.org/static/downloads/{{version}}/{name}}-{{version}}.{{extension}}
   ucxpath: "{{pkg_defaults.app_path}}/ucx/{{versions.ucx}}"
-  pkgname: "{{name}}_{{version}}_{{compiler}}_{{compiler_version}}"
   root: "{{parent}}/{{version}}/{{compiler}}/{{compiler_version}}"
-
   compiler: "{{versions.compiler}}"
   compiler_version: "{{versions.compiler_version}}"
   addfile: mpiconfig.sh

@@ -1,16 +1,15 @@
 # Builds the module for boost.
 !include boost.yaml
-!include rcic-module-spec.yaml
+!include rcic-module.yaml
 ---
 - package: boost Module
   category: TOOLS
   release: 2
   module:
+    <<: *ModuleCompiler
     prepend_path:
       - LD_LIBRARY_PATH {{root}}/{{module.lib}}
-      - "{{mod_defaults.flagspath}}"
+      - *Flagspath
     setenv:
-      - "{{mod_defaults.setenv}}"
+      - *Setenv
       - BOOST_HOME {{root}}
-    prereq:
-      - "{{compiler}}/{{compiler_version}}"

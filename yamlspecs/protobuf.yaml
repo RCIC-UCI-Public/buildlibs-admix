@@ -6,7 +6,6 @@
   version: "{{versions.protobuf}}"
   compiler: "{{versions.compiler}}"
   compiler_version: "{{versions.compiler_version}}"
-  pkgname: "{{name}}_{{version}}"
   vendor_source: https://github.com/protocolbuffers/protobuf/releases/download/v{{version}}/{{name}}-all-{{version}}.{{extension}}
   description: |
     Protocol Buffers {{version}} - Google's data interchange format 

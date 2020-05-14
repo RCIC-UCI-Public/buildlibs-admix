@@ -1,5 +1,3 @@
 # Builds the module for openmpi.
 !include openmpi.yaml
 !include mpi-module-generic.yaml
----
-- package: openmpi module 
