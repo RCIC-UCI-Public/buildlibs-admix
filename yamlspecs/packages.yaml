@@ -6,11 +6,15 @@ system:
   - libpciaccess-devel
 bootstrap:
   - ucx
+  - llvm
+  - llvm-module
 build:
   - boost
   - boost-module
   - boost-latest
   - boost-latest-module
+  - clang
+  - clang-module
   - fftw
   - fftw-module
   - openmpi
