@@ -1,0 +1,33 @@
+!include /opt/rcic/include/rcic-package.yaml
+---
+- package: llvm 
+  name: llvm
+  versions: !include versions.yaml
+  version: "{{versions.llvm.version}}" 
+  extension: src.tar.xz
+  vendor_source: https://github.com/llvm/llvm-project/releases/download/llvmorg-{{version}}/{{name}}-{{version}}.{{extension}}
+  description: |
+    LLVM version {{ version }}.  The LLVM Project is a collection of modular and reusable compiler 
+    and toolchain technologies. Despite its name, LLVM has little to do with 
+    traditional virtual machines. 
+    The name \"LLVM\" itself is not an acronym; it is the full name of the project.
+
+  compiler: "{{versions.compiler}}"
+  compiler_version: "{{versions.compiler_version}}"
+  src_dir: "{{ name }}-{{ version }}.src"
+  build:
+    configure: > 
+      (mkdir builddir; cd builddir; 
+      cmake -DCMAKE_BUILD_TYPE=RELEASE -G "Ninja" 
+      --prefix={{ root }} ..)
+    configure_args: 
+    modules:
+      - foundation 
+      - "{{versions.compiler}}/{{versions.compiler_version}}"
+    pkgmake: ninja -C builddir
+  install:
+    makeinstall: (cd builddir; cmake -DCMAKE_INSTALL_PREFIX=$(ROOT)/{{ root }} -P cmake_install.cmake) 
+    installextra: $(INSTALL) -m 644  README* LICENSE $(ROOT)/{{ root }}
+
+  requires:
+      - "{{versions.compiler}}_{{versions.compiler_version}}"
