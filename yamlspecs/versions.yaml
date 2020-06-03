@@ -8,8 +8,6 @@ boost:
   enc: "1_66_0"
   ver_latest: "1.71.0"
   enc_latest: "1_71_0"
-  compiler: "gcc"
-  compiler_version: "8.4.0"
 openmpi:
   version: "4.0.3"
   major: "4.0"
@@ -18,3 +16,5 @@ ucx: "1.6.1"
 singularity: "3.4.1"
 xz: "5.2.4"
 protobuf: "3.11.4"
+llvm: 
+  version: "10.0.0"

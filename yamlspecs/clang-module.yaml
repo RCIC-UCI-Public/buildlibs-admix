@@ -1,0 +1,16 @@
+# Builds the module for llvm.
+!include clang.yaml
+!include rcic-module.yaml
+---
+- package: Clang module
+  category: COMPILERS
+  module:
+    prereq:
+       - "{{compiler}}/{{compiler_version}}"
+    setenv:
+       - CC {{root}}/bin/clang
+       - CPP {{root}}/bin/clang-cpp
+       - CXX {{root}}/bin/clang++
+  requires:
+    - "{{name}}_{{version}}"
+    - "{{compiler}}_{{compiler_version}}-module"

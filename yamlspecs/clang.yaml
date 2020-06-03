@@ -1,0 +1,35 @@
+!include /opt/rcic/include/rcic-package.yaml
+---
+- package: clang 
+  name: clang
+  versions: !include versions.yaml
+  # Version tied to the version of llvm
+  version: "{{versions.llvm.version}}" 
+  extension: src.tar.xz
+  vendor_source: https://github.com/llvm/llvm-project/releases/download/llvmorg-{{version}}/{{name}}-{{version}}.{{extension}}
+  description: |
+    Clang version {{ version }}.  The Clang project provides a 
+    language front-end and tooling infrastructure for languages 
+    in the C language family (C, C++, Objective C/C++, OpenCL,
+    CUDA, and RenderScript) for the LLVM project. \n\n
+    You will need to explicitly call clang as CC/CXX/CPP are defined
+
+  compiler: llvm 
+  compiler_version: "{{versions.llvm.version}}"
+  src_dir: "{{ name }}-{{ version }}.src"
+  build:
+    configure: > 
+      (mkdir builddir; cd builddir; 
+      cmake -DCMAKE_BUILD_TYPE=RELEASE -G "Ninja" 
+      --prefix={{ root }} ..)
+    configure_args: 
+    modules:
+      - foundation 
+      - "{{compiler}}/{{compiler_version}}"
+    pkgmake: ninja -C builddir
+  install:
+    makeinstall: (cd builddir; cmake -DCMAKE_INSTALL_PREFIX=$(ROOT)/{{ root }} -P cmake_install.cmake) 
+    installextra: $(INSTALL) -m 644  README* LICENSE $(ROOT)/{{ root }}
+
+  requires:
+      - "{{compiler}}_{{compiler_version}}"
