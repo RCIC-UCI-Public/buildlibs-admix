@@ -21,6 +21,5 @@
        --with-dc             
        --with-ib-hw-tm        
        --with-dm               
-    pkgmake: sed -i '/\#define VERSION/d' config.h; make
   install:
     makeinstall: $(MAKE) DESTDIR=$(ROOT) install

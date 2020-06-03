@@ -24,6 +24,7 @@
     modules: 
       - "{{compiler}}/{{compiler_version}}"
     target: 
+  pkgmake: make -j 8
   install:
     makeinstall: unset F90; $(MAKE) DESTDIR=$(ROOT) install
   requires:

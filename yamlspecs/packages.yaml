@@ -4,6 +4,9 @@ system:
   - hwloc-devel
   - libibverbs-devel
   - libpciaccess-devel
+  - libtool
+  - autoconf
+  - automake
 bootstrap:
   - ucx
   - llvm
