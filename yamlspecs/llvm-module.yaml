@@ -5,7 +5,12 @@
 - package: LLVM module
   category: COMPILERS
   module:
-    <<: *ModuleCompiler
+    <<: *Module
+    prereq:
+       - "{{compiler}}/{{compiler_version}}"
     setenv:
        - LLVM_DIR {{root}}/lib/cmake/llvm
+ 
+  requires:
+     - "{{compiler}}_{{compiler_version}}"
 

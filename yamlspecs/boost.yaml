@@ -6,8 +6,8 @@
   versions: !include versions.yaml
   version: "{{versions.boost.ver}}"
   version_enc: "{{versions.boost.enc}}"
-  compiler: "{{versions.boost.compiler}}"
-  compiler_version: "{{versions.boost.compiler_version}}"
+  compiler: "{{versions.compiler}}"
+  compiler_version: "{{versions.compiler_version}}"
   extension: tar.gz
   vendor_source: https://dl.bintray.com/boostorg/release/{{version}}/source/boost_{{version_enc}}.{{extension}}
   description: |
