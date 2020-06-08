@@ -24,7 +24,7 @@
     configure: ./bootstrap.sh 
     configure_args:
     modules: "{{compiler}}/{{compiler_version}}"
-    pkgmake: ./b2 
+    pkgmake: ./b2 --with-iostreams 
     target: 
   install:
     makeinstall: >
