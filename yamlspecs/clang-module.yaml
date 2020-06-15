@@ -5,12 +5,11 @@
 - package: Clang module
   category: COMPILERS
   module:
-    <<: *Module
-    prereq:
-       - "{{compiler}}/{{compiler_version}}"
     setenv:
        - CC {{root}}/bin/clang
        - CPP {{root}}/bin/clang-cpp
        - CXX {{root}}/bin/clang++
-  requires:
-     - "{{compiler}}_{{compiler_version}}"
+    prereq: 
+      - *ModuleCompiler_prereq
+    requires: 
+      - *ModuleCompiler_requires
