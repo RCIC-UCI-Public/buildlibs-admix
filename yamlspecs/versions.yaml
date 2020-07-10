@@ -12,7 +12,7 @@ openmpi:
   version: "4.0.3"
   major: "4.0"
 mpich: "3.3.2"
-ucx: "1.6.1"
+ucx: "1.8.0"
 singularity: "3.4.1"
 xz: "5.2.4"
 protobuf: "3.11.4"
