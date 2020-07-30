@@ -4,8 +4,10 @@
 ---
 - package: LLVM module
   category: COMPILERS
+  release: 2
   module:
-    setenv:
+    setenv: 
+       - *Setenv
        - LLVM_DIR {{root}}/lib/cmake/llvm
     prereq: 
       - *ModuleCompiler_prereq
