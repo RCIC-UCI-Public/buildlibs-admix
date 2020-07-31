@@ -2,6 +2,7 @@
 ---
 - package: llvm 
   name: llvm
+  release: 2
   versions: !include versions.yaml
   version: "{{versions.llvm.version}}" 
   extension: src.tar.xz
@@ -19,6 +20,7 @@
     configure: > 
       (mkdir builddir; cd builddir; 
       cmake -DCMAKE_BUILD_TYPE=RELEASE -G "Ninja" 
+      -DLLVM_INSTALL_UTILS=ON
       --prefix={{ root }} ..)
     configure_args: 
     modules:
@@ -26,7 +28,7 @@
       - "{{versions.compiler}}/{{versions.compiler_version}}"
     pkgmake: ninja -C builddir
   install:
-    makeinstall: (cd builddir; cmake -DCMAKE_INSTALL_PREFIX=$(ROOT)/{{ root }} -P cmake_install.cmake) 
+    makeinstall: (cd builddir; cmake -DCMAKE_INSTALL_PREFIX=$(ROOT)/{{ root }} -DLLVM_INSTALL_UTILS=ON -P cmake_install.cmake) 
     installextra: $(INSTALL) -m 644  README* LICENSE $(ROOT)/{{ root }}
 
   requires:
