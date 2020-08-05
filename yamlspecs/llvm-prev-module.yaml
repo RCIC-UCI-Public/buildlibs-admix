@@ -1,0 +1,4 @@
+# Builds the module for llvm.
+!include llvm-module.yaml
+---
+- version: "{{versions.llvm.versionPrev}}" 

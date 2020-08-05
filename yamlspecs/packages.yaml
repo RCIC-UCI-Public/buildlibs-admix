@@ -29,6 +29,8 @@ build:
   - protobuf-module
   - xz
   - xz-module
+  - llvm-prev
+  - llvm-prev-module
 manifest:
   - "{{build}}"
   - "{{bootstrap}}"
