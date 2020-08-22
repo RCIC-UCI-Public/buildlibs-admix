@@ -4,7 +4,7 @@
 ---
 - package: boost Module
   category: TOOLS
-  release: 2
+  release: 3
   module:
     <<: *ModuleCompiler
     prepend_path:

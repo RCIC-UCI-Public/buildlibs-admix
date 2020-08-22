@@ -4,6 +4,7 @@
 ---
 - package: fftw Module
   category: TOOLS
+  release: 2
   module:
     <<: *Module
     prepend_path:

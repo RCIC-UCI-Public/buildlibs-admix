@@ -4,8 +4,8 @@
 ---
 - package: xz Module
   category: TOOLS
+  release: 2
   module:
-    <<: *Module
     prereq: 
       - *ModuleCompiler_prereq
     requires:

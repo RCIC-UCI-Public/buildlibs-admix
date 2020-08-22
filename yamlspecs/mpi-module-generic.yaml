@@ -3,6 +3,7 @@
 ---
 - package: mpi generic module
   category: COMPILERS
+  release: 2
   module:
     <<: *ModuleCompiler
     setenv:

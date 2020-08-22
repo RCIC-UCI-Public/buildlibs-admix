@@ -4,11 +4,8 @@
 ---
 - package: Clang module
   category: COMPILERS
+  release: 3
   module:
-    setenv:
-       - CC {{root}}/bin/clang
-       - CPP {{root}}/bin/clang-cpp
-       - CXX {{root}}/bin/clang++
     prereq: 
       - *ModuleCompiler_prereq
     requires: 

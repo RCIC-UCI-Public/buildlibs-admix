@@ -4,7 +4,7 @@
 ---
 - package: LLVM module
   category: COMPILERS
-  release: 2
+  release: 3
   module:
     setenv: 
        - *Setenv
