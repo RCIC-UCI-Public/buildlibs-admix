@@ -1,0 +1,18 @@
+!include rcic-package.yaml
+---
+- package: geos 
+  name: geos 
+  versions: !include versions.yaml
+  version: "{{versions.geos}}"
+  extension: tar.bz2
+  vendor_source: http://download.osgeo.org/{{name}}/{{name}}-{{version}}.{{extension}}
+  description: |
+    GEOS version {{version}} (Geometry Engine - Open Source) is a C++ 
+    port of the JTS Topology Suite (JTS). It aims to contain the complete 
+    functionality of JTS in C++. This includes all the OpenGIS Simple 
+    Features for SQL spatial predicate functions and spatial operators, 
+    as well as specific JTS enhanced functions. GEOS provides spatial 
+    functionality to many other projects and products.
+
+  build:
+    preconfigure: ./autogen.sh

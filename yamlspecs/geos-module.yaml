@@ -1,0 +1,10 @@
+# Builds the module for geos.
+!include geos.yaml
+!include rcic-module.yaml
+---
+- package: geos Module
+  category: TOOLS
+  module:
+    prepend_path:
+      - LD_LIBRARY_PATH {{root}}/{{module.lib}}
+      - *Flagspath

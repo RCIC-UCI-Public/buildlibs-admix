@@ -31,6 +31,8 @@ build:
   - xz-module
   - llvm-prev
   - llvm-prev-module
+  - geos
+  - geos-module
 manifest:
   - "{{build}}"
   - "{{bootstrap}}"

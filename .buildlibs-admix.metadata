@@ -10,4 +10,5 @@ fe84dcefb64c1fac79b6797c94dd33fbc0a1b840  sources/xz-5.2.4.tar.gz.sig 1IzJGWxNqq
 85f2d89205fb190c61c8a98dad2a58e27a1540da  sources/llvm-10.0.0.src.tar.xz 1yOnVfQSedI82DjJuMzYyl8jnCNqO1LEj
 cfaa4c4e89a45b604e6f3057f984d73365074727  sources/clang-10.0.0.src.tar.xz 19eXMBlOkYyU7z2vqrslq_luQ_M8eN3nB
 9672026c8ade2ba55f42540e035cda3e63c5dab6  sources/ucx-1.8.0.tar.gz 1FNUP3H5xKTj8xRDOhNW-qS_YlrFmdXO7
-f7fcf3bd92d130784513c06efe6910f135372ce3  sources/llvm-9.0.1.src.tar.xz
+f7fcf3bd92d130784513c06efe6910f135372ce3  sources/llvm-9.0.1.src.tar.xz 1jQ6KHARGQSCRSAfj_sYeRtES4Flqbfzc
+dbd165752dd4c48d81a84aa51c99d04410d96c67  sources/geos-3.8.1.tar.bz2 10LlmhYY2GCyC5atBn6DktKcA2YiAFn_s
