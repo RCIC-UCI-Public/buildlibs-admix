@@ -6,5 +6,5 @@
   category: TOOLS
   module:
     prepend_path:
-      - LD_LIBRARY_PATH {{root}}/{{module.lib}}
+      - *Prepend_path 
       - *Flagspath
