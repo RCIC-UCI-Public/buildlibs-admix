@@ -1,0 +1,2 @@
+compiler: "gcc"
+compiler_version: "8.4.0"

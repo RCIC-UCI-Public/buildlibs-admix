@@ -1,19 +1,23 @@
 # This the Makefile for updated version group
+ALL_TARGETS = versions_intel.yaml intel
 include $(YAML2RPM_HOME)/sys/Makefile
 
 # INTELPKGS and INTELTARGETS are defined in this included file
 include IntelDefs.mk
 
 GENEXTRAS = --map='{"versions.yaml":"versions_intel.yaml"}'
-ALL_TARGETS = versions_intel.yaml intel
 
 MANIFEST = $(INTELPKGS)
 VERSIONSFILE = versions_intel.yaml
+
+
+versions: $(VERSIONSFILE)
+
 $(VERSIONSFILE): versions.yaml versions.intel
 	grep -v $$(cat versions.intel | awk '{printf "-e ^%s ",$$1}') versions.yaml > $@
 	cat versions.intel >> $@
 
-intel: $(VERSIONSFILE) 
+intel: versions 
 	( for pkg in $(INTELTARGETS); do 				\
 		if [ -f $$pkg ]; then /bin/rm $$pkg; fi	;	\
                 make -f $(THISMAKE) $$pkg; 			\
