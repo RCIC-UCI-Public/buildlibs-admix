@@ -15,7 +15,7 @@
     You will need to explicitly call clang as CC/CXX/CPP are defined
 
   compiler: llvm 
-  compiler_version: "{{versions.llvm.version}}"
+  compiler_version: "{{version}}"
   src_dir: "{{ name }}-{{ version }}.src"
   build:
     configure: > 

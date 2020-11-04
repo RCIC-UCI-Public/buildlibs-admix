@@ -12,6 +12,8 @@ bootstrap:
   - ucx
   - llvm
   - llvm-module
+  - llvm-prev
+  - llvm-prev-module
 build:
   - boost
   - boost-module
@@ -19,6 +21,8 @@ build:
   - boost-latest-module
   - clang
   - clang-module
+  - clang-prev
+  - clang-prev-module
   - fftw
   - fftw-module
   - openmpi
