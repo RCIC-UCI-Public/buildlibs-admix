@@ -9,7 +9,7 @@ boost:
 openmpi:
   version: "4.0.3"
   major: "4.0"
-mpich: "3.3.2"
+mpich: "3.4"
 ucx: "1.8.0"
 singularity: "3.4.1"
 xz: "5.2.4"
@@ -17,5 +17,6 @@ protobuf: "3.11.4"
 llvm: 
   version: "10.0.0"
   versionPrev: "9.0.1"
+geos: "3.8.1"
 compiler: "intel"
 compiler_version: "2020u1"

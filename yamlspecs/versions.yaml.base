@@ -9,7 +9,7 @@ boost:
 openmpi:
   version: "4.0.3"
   major: "4.0"
-mpich: "3.3.2"
+mpich: "3.4"
 ucx: "1.8.0"
 singularity: "3.4.1"
 xz: "5.2.4"

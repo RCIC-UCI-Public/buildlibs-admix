@@ -6,7 +6,7 @@
   baserpm: "{{name}}_{{version}}_{{compiler}}_{{compiler_version}}"
   versions: !include versions.yaml
   version: "{{versions.mpich}}"
-  vendor_source: http://www.mpich.org/static/downloads/{{version}}/{name}}-{{version}}.{{extension}}
+  vendor_source: http://www.mpich.org/static/downloads/{{version}}/{{name}}-{{version}}.{{extension}}
   ucxpath: "{{pkg_defaults.app_path}}/ucx/{{versions.ucx}}"
   root: "{{parent}}/{{version}}/{{compiler}}/{{compiler_version}}"
   compiler: "{{versions.compiler}}"
