@@ -2,7 +2,7 @@
 ---
 - package: openmpi 
   name: openmpi
-  release: 2
+  release: 3
   baserpm: "{{name}}_{{version}}_{{compiler}}_{{compiler_version}}"
   versions: !include versions.yaml
   version: "{{versions.openmpi.version}}"
