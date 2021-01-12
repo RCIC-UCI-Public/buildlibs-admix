@@ -13,7 +13,7 @@
   addfile: mpiconfig.sh
   build:
     preconfigure: ./autogen.sh
-    configure: CFLAGS="-Wno-error" ../mpiconfig.sh
+    configure: CFLAGS="-fPIC" ../mpiconfig.sh
     configure_args: >   
        --prefix={{root}}
        --with-rc 
