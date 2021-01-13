@@ -1,0 +1,11 @@
+# Builds the module for lapack.
+!include lapack.yaml
+!include rcic-module.yaml
+---
+- package: lapack Module
+  category: LIBRARIES
+  module:
+    setenv: 
+      - LAPACK_DIR {{root}}
+    prepend_path:
+      - LD_LIBRARY_PATH {{root}}/{{module.lib}}

@@ -1,0 +1,37 @@
+!include rcic-package.yaml
+---
+- package: lapack 
+  name: lapack
+  versions: !include versions.yaml
+  version: "{{versions.lapack}}"
+  vendor_source: https://github.com/Reference-LAPACK/lapack/archive/v{{version}}.{{extension}}
+  compiler: "{{versions.compiler}}"
+  compiler_version: "{{versions.compiler_version}}"
+  description: |
+    LAPACK {{version}} is a library of Fortran subroutines for solving
+    the most commonly occurring problems in numerical linear algebra.
+    LAPACK is a freely-available software package. Proper credit should
+    be given to the authors, for example by citing the LAPACK Users' Guide.
+    The license used for the software is the modified BSD license.
+    See http://www.netlib.org/lapack
+  build:
+    configure: >
+      cp make.inc.example make.inc;
+      make lapack_install;
+      make -j 8 lapacklib tmglib blaslib cblaslib variants lapackelib;
+      make -j 8 blas_testing cblas_testing variants_testing;
+      uname -s unlimited;
+      make -j 8 lapack_testing;
+      uname -s 8192
+    configure_args: ""
+    modules: 
+      - "{{compiler}}/{{compiler_version}}"
+    target: 
+  pkgmake: echo
+  install:
+    makeinstall: >
+      mkdir -p $(ROOT){{root}}/lib;
+      $(INSTALL) -m 644 lib*a $(ROOT)/{{root}}/lib
+    installextra: $(INSTALL) -m 644  README* LICENSE $(ROOT)/{{root}}
+  requires:
+      - "{{compiler}}_{{compiler_version}}"

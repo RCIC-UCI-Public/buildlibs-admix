@@ -39,6 +39,8 @@ build:
   - geos-module
   - scalapack
   - scalapack-module
+  - lapack
+  - lapack-module
 manifest:
   - "{{build}}"
   - "{{bootstrap}}"

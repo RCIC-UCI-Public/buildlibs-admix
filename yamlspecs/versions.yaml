@@ -21,3 +21,4 @@ llvm:
   versionPrev: "9.0.1"
 geos: "3.8.1"
 scalapack: "2.1.0"
+lapack: "3.9.0"
