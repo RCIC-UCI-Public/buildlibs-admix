@@ -1,0 +1,11 @@
+# Builds the module for scalapack.
+!include scalapack.yaml
+!include rcic-module.yaml
+---
+- package: scalapack Module
+  category: LIBRARIES
+  module:
+    setenv: 
+      - SCALAPACK_DIR {{root}}
+    prepend_path:
+      - LD_LIBRARY_PATH {{root}}/{{module.lib}}

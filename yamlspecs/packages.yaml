@@ -37,6 +37,8 @@ build:
   - llvm-prev-module
   - geos
   - geos-module
+  - scalapack
+  - scalapack-module
 manifest:
   - "{{build}}"
   - "{{bootstrap}}"
