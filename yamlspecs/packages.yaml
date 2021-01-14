@@ -33,8 +33,6 @@ build:
   - protobuf-module
   - xz
   - xz-module
-  - llvm-prev
-  - llvm-prev-module
   - geos
   - geos-module
   - scalapack
