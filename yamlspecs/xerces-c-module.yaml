@@ -1,0 +1,13 @@
+# Builds the module for xerces-c.
+!include xerces-c.yaml
+!include rcic-module.yaml
+---
+- package: xerces-c Module
+  shortname: xercesc
+  category: LIBRARIES
+  module:
+    lib: lib64
+#    prereq: 
+#      - *ModuleCompiler_prereq
+#    requires:
+#      - *ModuleCompiler_requires

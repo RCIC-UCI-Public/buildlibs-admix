@@ -41,6 +41,8 @@ build:
   - scalapack-module
   - lapack
   - lapack-module
+  - xerces-c
+  - xerces-c-module
 manifest:
   - "{{build}}"
   - "{{bootstrap}}"

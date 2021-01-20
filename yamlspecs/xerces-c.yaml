@@ -1,0 +1,27 @@
+!include rcic-package.yaml
+---
+- package: xerces-c
+  name: xerces-c
+  versions: !include versions.yaml
+  version: "{{versions.xercesc}}" 
+  compiler: "{{versions.compiler}}"
+  compiler_version: "{{versions.compiler_version}}"
+  vendor_source:  https://downloads.apache.org//xerces/c/3/sources/{{name}}-{{version}}.{{extension}}
+  description: |
+    Xerces C++ {{version}} is a sub-project of the Apache Xerces Project.
+    Xerces-C++ is a validating XML parser written in a portable subset
+    of C++. Xerces-C++ makes it easy to give your application the ability
+    to read and write XML data.  See http://xerces.apache.org/xerces-c
+  build:
+    configure: > 
+      (mkdir builddir; cd builddir; cmake --prefix={{root}} ..)
+    configure_args: 
+    modules:
+      - foundation 
+      - "{{compiler}}/{{compiler_version}}"
+    pkgmake: cd builddir; make -j 8
+  install:
+    makeinstall: (cd builddir; cmake -DCMAKE_INSTALL_PREFIX=$(ROOT)/{{root}} -P cmake_install.cmake) 
+    installextra: $(INSTALL) -m 644  README LICENSE $(ROOT)/{{root}}
+  requires:
+      - "{{compiler}}_{{compiler_version}}"
