@@ -19,6 +19,8 @@ build:
   - boost-module
   - boost-latest
   - boost-latest-module
+  - boost-archaic
+  - boost-archaic-module
   - clang
   - clang-module
   - clang-prev
