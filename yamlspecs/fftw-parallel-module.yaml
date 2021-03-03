@@ -1,11 +1,11 @@
-# Build the module for fftw. 
-!include fftw.yaml
+# Build the module for openmpi version of fftw. 
+!include fftw-parallel.yaml
 !include rcic-module.yaml
 ---
 - package: fftw Module
   category: TOOLS
   module:
-    <<: *ModuleCompiler
+    <<: *ModuleCompilerMpi
     setenv:
       - *Setenv
       - FFTW_DIR {{root}}

@@ -1,0 +1,4 @@
+# Build the module for fftw compiled with system gcc
+!include fftw-module.yaml
+---
+- compiler_version: "{{versions.compiler_system}}"

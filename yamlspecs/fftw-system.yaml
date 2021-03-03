@@ -1,0 +1,4 @@
+# build fftw with default system compiler
+!include fftw.yaml
+---
+- compiler_version: "{{versions.compiler_system}}"
