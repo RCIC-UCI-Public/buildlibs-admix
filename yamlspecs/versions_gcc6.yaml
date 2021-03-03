@@ -1,0 +1,25 @@
+---
+compiler_system: "4.8.5"
+fftw: "3.3.8"
+boost:
+  ver: "1.66.0"
+  enc: "1_66_0"
+  ver_latest: "1.71.0"
+  enc_latest: "1_71_0"
+openmpi:
+  version: "4.0.3"
+  major: "4.0"
+mpich: "3.4"
+ucx: "1.8.0"
+singularity: "3.4.1"
+xz: "5.2.4"
+protobuf: "3.11.4"
+llvm: 
+  version: "10.0.0"
+  versionPrev: "9.0.1"
+geos: "3.8.1"
+scalapack: "2.1.0"
+lapack: "3.9.0"
+xercesc: "3.2.3"
+compiler: "gcc"
+compiler_version: "6.5.0"
