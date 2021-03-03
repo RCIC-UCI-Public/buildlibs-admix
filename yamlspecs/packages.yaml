@@ -27,6 +27,10 @@ build:
   - clang-prev-module
   - fftw
   - fftw-module
+  - fftw-parallel
+  - fftw-parallel-module
+  - fftw-system
+  - fftw-system-module 
   - openmpi
   - openmpi-module
   - mpich
