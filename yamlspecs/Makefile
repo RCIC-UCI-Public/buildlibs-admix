@@ -12,7 +12,7 @@ include IntelDefs.mk
 include Gcc6Defs.mk
 
 .DEFAULT_GOAL = default
-%.pkg:
+%.pkg: %.yaml
 	$(MAKE) -f Makefile.gcc $@
 	echo $(INTELTARGETS) | grep -q -w $@; \
 	if [ $$? -eq 0 ]; then \
