@@ -39,6 +39,7 @@ download:
 %: 	
 	$(MAKE) -f Makefile.gcc $@
 	$(MAKE) -f Makefile.intel clean
+	$(MAKE) -f Makefile.intel versions_intel.yaml 
 	$(MAKE) -f Makefile.intel $@
 	$(MAKE) -f Makefile.gcc6 clean
 	$(MAKE) -f Makefile.gcc6 $@

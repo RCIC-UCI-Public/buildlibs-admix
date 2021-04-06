@@ -14,6 +14,8 @@ bootstrap:
   - llvm-module
   - llvm-prev
   - llvm-prev-module
+  - openmpi
+  - openmpi-module
 build:
   - boost
   - boost-module
@@ -31,8 +33,6 @@ build:
   - fftw-parallel-module
   - fftw-system
   - fftw-system-module 
-  - openmpi
-  - openmpi-module
   - mpich
   - mpich-module
   - protobuf
