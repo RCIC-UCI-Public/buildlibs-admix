@@ -8,11 +8,10 @@
   extension: src.tar.xz
   vendor_source: https://github.com/llvm/llvm-project/releases/download/llvmorg-{{version}}/{{name}}-{{version}}.{{extension}}
   description: |
-    LLVM version {{ version }}.  The LLVM Project is a collection of modular and reusable compiler 
-    and toolchain technologies. Despite its name, LLVM has little to do with 
-    traditional virtual machines. 
-    The name \"LLVM\" itself is not an acronym; it is the full name of the project.
-
+    LLVM version {{version}}. The LLVM Project is a collection of modular and
+    reusable compiler and toolchain technologies. Despite its name, LLVM
+    has little to do with traditional virtual machines.  The name LLVM
+    itself is not an acronym; it is the full name of the project
   compiler: "{{versions.compiler}}"
   compiler_version: "{{versions.compiler_version}}"
   src_dir: "{{ name }}-{{ version }}.src"
@@ -22,14 +21,14 @@
       cmake -DCMAKE_BUILD_TYPE=RELEASE -G "Ninja" 
       -DLLVM_INSTALL_UTILS=ON
       --prefix={{ root }} ..)
-    configure_args: 
+    base_modules:
+      - "{{versions.compiler}}/{{versions.compiler_version}}"
     modules:
       - foundation 
-      - "{{versions.compiler}}/{{versions.compiler_version}}"
+      - "{{build.base_modules}}" 
     pkgmake: ninja -C builddir
   install:
     makeinstall: (cd builddir; cmake -DCMAKE_INSTALL_PREFIX=$(ROOT)/{{ root }} -DLLVM_INSTALL_UTILS=ON -P cmake_install.cmake) 
     installextra: $(INSTALL) -m 644  README* LICENSE $(ROOT)/{{ root }}
-
   requires:
       - "{{versions.compiler}}_{{versions.compiler_version}}"

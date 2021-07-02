@@ -15,10 +15,11 @@
   build:
     configure: > 
       (mkdir builddir; cd builddir; cmake --prefix={{root}} ..)
-    configure_args: 
+    base_modules:
+      - "{{compiler}}/{{compiler_version}}"
     modules:
       - foundation 
-      - "{{compiler}}/{{compiler_version}}"
+      - "{{build.base_modules}}" 
     pkgmake: cd builddir; make -j 8
   install:
     makeinstall: (cd builddir; cmake -DCMAKE_INSTALL_PREFIX=$(ROOT)/{{root}} -P cmake_install.cmake) 

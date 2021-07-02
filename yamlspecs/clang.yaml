@@ -13,7 +13,6 @@
     in the C language family (C, C++, Objective C/C++, OpenCL,
     CUDA, and RenderScript) for the LLVM project. \n\n
     You will need to explicitly call clang as CC/CXX/CPP are defined
-
   compiler: llvm 
   compiler_version: "{{version}}"
   src_dir: "{{ name }}-{{ version }}.src"
@@ -22,14 +21,14 @@
       (mkdir builddir; cd builddir; 
       cmake -DCMAKE_BUILD_TYPE=RELEASE -G "Ninja" 
       --prefix={{ root }} ..)
-    configure_args: 
+    base_modules:
+      - "{{compiler}}/{{compiler_version}}"
     modules:
       - foundation 
-      - "{{compiler}}/{{compiler_version}}"
+      - "{{build.base_modules}}"
     pkgmake: ninja -C builddir
   install:
     makeinstall: (cd builddir; cmake -DCMAKE_INSTALL_PREFIX=$(ROOT)/{{ root }} -P cmake_install.cmake) 
     installextra: $(INSTALL) -m 644  README* LICENSE $(ROOT)/{{ root }}
-
   requires:
       - "{{compiler}}_{{compiler_version}}"

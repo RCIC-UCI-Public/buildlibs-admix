@@ -20,7 +20,6 @@
     configure_args: --prefix={{root}} {{build.baseargs}}
     modules: 
        - "{{compiler}}/{{compiler_version}}"
-    target: 
   install:
     makeinstall: $(MAKE) DESTDIR=$(ROOT) install
   requires:

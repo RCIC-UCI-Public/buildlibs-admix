@@ -1,8 +1,7 @@
-# Builds the module for lapack.
 !include lapack.yaml
 !include rcic-module.yaml
 ---
-- package: lapack Module
+- package: lapack module
   category: LIBRARIES
   module:
     setenv: 

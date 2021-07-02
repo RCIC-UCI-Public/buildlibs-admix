@@ -23,11 +23,8 @@
       uname -s unlimited;
       make -j 8 lapack_testing;
       uname -s 8192
-    configure_args: ""
     modules: 
       - "{{compiler}}/{{compiler_version}}"
-    target: 
-  pkgmake: echo
   install:
     makeinstall: >
       mkdir -p $(ROOT){{root}}/lib;

@@ -1,4 +1,3 @@
-# Builds the module for llvm.
 !include llvm.yaml
 !include rcic-module.yaml
 ---
@@ -10,6 +9,4 @@
        - *Setenv
        - LLVM_DIR {{root}}/lib/cmake/llvm
     prereq: 
-      - *ModuleCompiler_prereq
-    requires: 
-      - *ModuleCompiler_requires
+      - "{{build.base_modules}}"

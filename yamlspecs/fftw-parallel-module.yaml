@@ -1,8 +1,7 @@
-# Build the module for openmpi version of fftw. 
 !include fftw-parallel.yaml
 !include rcic-module.yaml
 ---
-- package: fftw Module
+- package: fftw module
   category: TOOLS
   module:
     <<: *ModuleCompilerMpi

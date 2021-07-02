@@ -10,8 +10,6 @@
   build:
     configure_args: --prefix={{root}} {{build.baseargs}} --enable-mpi
     modules:
-       - "{{compiler}}/{{compiler_version}}"
        - "{{mpi}}/{{mpi_version}}/{{compiler}}.{{compiler_version}}"
   requires:
-      - "{{compiler}}_{{compiler_version}}"
       - "{{mpi}}_{{mpi_version}}_{{compiler}}_{{compiler_version}}"

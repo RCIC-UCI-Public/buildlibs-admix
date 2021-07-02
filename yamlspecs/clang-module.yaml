@@ -1,4 +1,3 @@
-# Builds the module for llvm.
 !include clang.yaml
 !include rcic-module.yaml
 ---
@@ -7,6 +6,4 @@
   release: 3
   module:
     prereq: 
-      - *ModuleCompiler_prereq
-    requires: 
-      - *ModuleCompiler_requires
+      - "{{build.base_modules}}"

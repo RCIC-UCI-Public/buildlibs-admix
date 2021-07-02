@@ -1,8 +1,7 @@
-# Builds the module for geos.
 !include geos.yaml
 !include rcic-module.yaml
 ---
-- package: geos Module
+- package: geos module
   category: TOOLS
   module:
     prepend_path:

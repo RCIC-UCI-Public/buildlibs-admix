@@ -24,8 +24,7 @@
     configure_args: --prefix={{root}} --with-verbs --with-hwloc=internal --enable-romio --with-ucx={{ucxpath}} 
     modules: 
       - "{{compiler}}/{{compiler_version}}"
-    target: 
-  pkgmake: make -j 8
+    pkgmake: make -j 8
   install:
     makeinstall: unset F90; $(MAKE) DESTDIR=$(ROOT) install
   requires:

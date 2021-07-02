@@ -15,10 +15,8 @@
     configure: ./configure
     configure_args: > 
       --prefix={{root}}
-    pkgmake: make 
     modules:
       - "{{compiler}}/{{compiler_version}}"
-    target: 
   install:
     makeinstall: >
        mkdir -p $(ROOT){{root}};

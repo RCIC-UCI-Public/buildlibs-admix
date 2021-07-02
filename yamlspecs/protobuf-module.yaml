@@ -1,18 +1,12 @@
-# Builds the module for protobuf.
 !include protobuf.yaml
 !include rcic-module.yaml
 ---
-- package: protobuf Module
+- package: protobuf module
   category: TOOLS
   release: 2
   module:
-    <<: *Module
     prepend_path:
       - PATH {{root}}/bin
       - LD_LIBRARY_PATH {{root}}/{{module.lib}}
       - PKG_CONFIG_PATH {{root}}/{{module.lib}}/pkgconfig
       - *Flagspath
-    prereq: 
-      - *ModuleCompiler_prereq
-    requires:
-      - *ModuleCompiler_requires

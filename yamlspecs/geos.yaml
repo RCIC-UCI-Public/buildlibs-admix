@@ -13,6 +13,5 @@
     Features for SQL spatial predicate functions and spatial operators, 
     as well as specific JTS enhanced functions. GEOS provides spatial 
     functionality to many other projects and products.
-
   build:
     preconfigure: ./autogen.sh

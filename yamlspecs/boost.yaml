@@ -22,10 +22,8 @@
   root: "{{pkg_defaults.app_path}}/{{name}}/{{version}}/{{compiler}}/{{compiler_version}}"
   build:
     configure: ./bootstrap.sh 
-    configure_args:
     modules: "{{compiler}}/{{compiler_version}}"
     pkgmake: ./b2 --with-iostreams 
-    target: 
   install:
     makeinstall: >
       ./b2 --prefix=$(ROOT)/{{root}} install

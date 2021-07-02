@@ -1,4 +1,3 @@
-# Builds the module for mpich.
 !include rcic-module.yaml
 ---
 - package: mpi generic module
