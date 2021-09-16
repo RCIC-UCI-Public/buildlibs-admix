@@ -46,6 +46,8 @@ manifest:
   - "{{bootstrap}}"
   - "{{system}}"
 sets:
+  - system
   - intel
   - gcc6
   - latest
+

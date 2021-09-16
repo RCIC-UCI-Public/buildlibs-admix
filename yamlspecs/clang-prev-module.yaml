@@ -1,3 +1,0 @@
-!include clang-module.yaml 
----
-- version: "{{versions.llvm.versionPrev}}" 

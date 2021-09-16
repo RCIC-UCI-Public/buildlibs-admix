@@ -1,4 +1,0 @@
-# Builds the module for boost latest version
-!include boost-module.yaml
----
-- version: "{{versions.boost.ver_latest}}"

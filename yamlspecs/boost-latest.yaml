@@ -1,4 +1,0 @@
-!include boost.yaml
----
-- version: "{{versions.boost.ver_latest}}"
-  version_enc: "{{versions.boost.enc_latest}}"

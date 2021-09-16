@@ -1,0 +1,8 @@
+---
+versions: system.versions.yaml
+bootstrap:
+build:
+   - fftw
+   - fftw-module
+manifest:
+   - "{{build}}"

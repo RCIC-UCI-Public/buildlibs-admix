@@ -1,0 +1,4 @@
+!include versions.yaml
+---
+compiler: "gcc"
+compiler_version: "4.8.5"

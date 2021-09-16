@@ -1,3 +1,0 @@
-!include llvm-module.yaml
----
-- version: "{{versions.llvm.versionPrev}}" 
