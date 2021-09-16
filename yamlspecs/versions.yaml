@@ -1,7 +1,6 @@
 ---
 compiler: "gcc"
 compiler_version: "8.4.0"
-compiler_system: "4.8.5"
 fftw: "3.3.8"
 boost:
   ver: "1.66.0"
