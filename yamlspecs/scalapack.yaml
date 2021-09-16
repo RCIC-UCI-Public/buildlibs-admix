@@ -19,6 +19,7 @@
     preconfigure: sed -i "s/\$${MPIEXEC}/\$${MPIEXEC} --bind-to core/g" ./TESTING/CMakeLists.txt
     configure: > 
       (mkdir builddir; cd builddir; cmake --prefix={{root}} ..)
+    configure_args: 
     base_modules:
       - "{{mpi}}/{{mpi_version}}/{{compiler}}.{{compiler_version}}"
     modules:

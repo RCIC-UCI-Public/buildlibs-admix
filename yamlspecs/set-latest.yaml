@@ -1,0 +1,13 @@
+---
+versions: latest.versions.yaml
+bootstrap:
+   - llvm
+   - llvm-module
+build:
+   - clang 
+   - clang-module 
+   - boost
+   - boost-module
+manifest:
+   - "{{bootstrap}}"
+   - "{{build}}"

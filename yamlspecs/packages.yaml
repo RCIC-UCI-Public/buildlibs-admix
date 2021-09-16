@@ -12,21 +12,15 @@ bootstrap:
   - ucx
   - llvm
   - llvm-module
-  - llvm-prev
-  - llvm-prev-module
   - openmpi
   - openmpi-module
 build:
   - boost
   - boost-module
-  - boost-latest
-  - boost-latest-module
   - boost-archaic
   - boost-archaic-module
   - clang
   - clang-module
-  - clang-prev
-  - clang-prev-module
   - fftw
   - fftw-module
   - fftw-parallel
@@ -51,3 +45,7 @@ manifest:
   - "{{build}}"
   - "{{bootstrap}}"
   - "{{system}}"
+sets:
+  - intel
+  - gcc6
+  - latest

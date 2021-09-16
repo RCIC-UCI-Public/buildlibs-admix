@@ -14,4 +14,4 @@
     as well as specific JTS enhanced functions. GEOS provides spatial 
     functionality to many other projects and products.
   build:
-    preconfigure: ./autogen.sh
+    configure: ./configure

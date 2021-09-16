@@ -4,7 +4,7 @@
   name: llvm
   release: 2
   versions: !include versions.yaml
-  version: "{{versions.llvm.version}}" 
+  version: "{{versions.llvm}}" 
   extension: src.tar.xz
   vendor_source: https://github.com/llvm/llvm-project/releases/download/llvmorg-{{version}}/{{name}}-{{version}}.{{extension}}
   description: |
@@ -21,6 +21,7 @@
       cmake -DCMAKE_BUILD_TYPE=RELEASE -G "Ninja" 
       -DLLVM_INSTALL_UTILS=ON
       --prefix={{ root }} ..)
+    configure_args:
     base_modules:
       - "{{versions.compiler}}/{{versions.compiler_version}}"
     modules:

@@ -1,0 +1,8 @@
+---
+versions: gcc6.versions.yaml
+bootstrap:
+build:
+   - openmpi 
+   - openmpi-module 
+manifest:
+   - "{{build}}"

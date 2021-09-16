@@ -17,6 +17,7 @@
     {{compileopts}}
   build:
     baseargs: --enable-shared --enable-fma --enable-sse2 --enable-avx --enable-openmp --enable-threads
+    configure: ./configure
     configure_args: --prefix={{root}} {{build.baseargs}}
     modules: 
        - "{{compiler}}/{{compiler_version}}"

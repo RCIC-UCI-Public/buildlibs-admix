@@ -15,6 +15,7 @@
   build:
     configure: > 
       (mkdir builddir; cd builddir; cmake --prefix={{root}} ..)
+    configure_args: 
     base_modules:
       - "{{compiler}}/{{compiler_version}}"
     modules:
