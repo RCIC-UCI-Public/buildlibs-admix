@@ -1,5 +1,5 @@
 ---
-versions: gcc6.versions.yaml
+versions: versions-gcc6.yaml
 bootstrap:
 build:
    - openmpi 

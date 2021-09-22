@@ -1,5 +1,5 @@
 ---
-versions: latest.versions.yaml
+versions: versions-latest.yaml
 bootstrap:
    - llvm
    - llvm-module

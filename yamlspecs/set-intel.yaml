@@ -1,5 +1,5 @@
 ---
-versions: intel.versions.yaml
+versions: versions-intel.yaml
 bootstrap:
 build:
    - openmpi 

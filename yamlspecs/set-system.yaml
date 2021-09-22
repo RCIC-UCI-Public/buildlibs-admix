@@ -1,5 +1,5 @@
 ---
-versions: system.versions.yaml
+versions: versions-system.yaml
 bootstrap:
 build:
    - fftw
