@@ -1,6 +1,7 @@
 ---
-compiler: "gcc"
-compiler_version: "8.4.0"
+compiler:
+  name: gcc
+  version: "8.4.0"
 fftw: "3.3.8"
 boost:
   ver: "1.66.0"

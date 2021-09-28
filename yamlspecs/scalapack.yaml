@@ -1,13 +1,8 @@
-!include rcic-package.yaml
+!include common.yaml
 ---
 - package: scalapack 
   name: scalapack
-  versions: !include versions.yaml
   version: "{{versions.scalapack}}" 
-  compiler: "{{versions.compiler}}"
-  compiler_version: "{{versions.compiler_version}}"
-  mpi: "openmpi"
-  mpi_version: "{{versions.openmpi.version}}"
   extension: "tgz"
   vendor_source: http://www.netlib.org/scalapack/{{name}}-{{version}}.{{extension}}
   description: |
@@ -20,14 +15,12 @@
     configure: > 
       (mkdir builddir; cd builddir; cmake --prefix={{root}} ..)
     configure_args: 
-    base_modules:
-      - "{{mpi}}/{{mpi_version}}/{{compiler}}.{{compiler_version}}"
     modules:
       - foundation 
-      - "{{build.base_modules}}"
+      - "{{mpi}}/{{mpi_version}}/{{compiler}}.{{compiler_version}}"
     pkgmake: cd builddir; make -j
+  extras: README LICENSE
   install:
     makeinstall: (cd builddir; cmake -DCMAKE_INSTALL_PREFIX=$(ROOT)/{{root}} -P cmake_install.cmake) 
-    installextra: $(INSTALL) -m 644  README LICENSE $(ROOT)/{{root}}
   requires:
       - "{{mpi}}_{{mpi_version}}_{{compiler}}_{{compiler_version}}"

@@ -1,4 +1,4 @@
-!include rcic-package.yaml
+!include common.yaml
 ---
 - package: mpich 
   name: mpich
@@ -9,8 +9,6 @@
   vendor_source: http://www.mpich.org/static/downloads/{{version}}/{{name}}-{{version}}.{{extension}}
   ucxpath: "{{pkg_defaults.app_path}}/ucx/{{versions.ucx}}"
   root: "{{parent}}/{{version}}/{{compiler}}/{{compiler_version}}"
-  compiler: "{{versions.compiler}}"
-  compiler_version: "{{versions.compiler_version}}"
   addfile: mpiconfig.sh
   description: |
       MPICH version {{version}} compiled with UCX {{versions.ucx}}.
@@ -22,8 +20,6 @@
   build:
     configure: ../mpiconfig.sh 
     configure_args: --prefix={{root}} --with-verbs --with-hwloc=internal --enable-romio --with-ucx={{ucxpath}} 
-    modules: 
-      - "{{compiler}}/{{compiler_version}}"
     pkgmake: make -j 8
   install:
     makeinstall: unset F90; $(MAKE) DESTDIR=$(ROOT) install

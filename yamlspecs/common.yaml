@@ -1,0 +1,19 @@
+!include rcic-package.yaml
+!include rpm.yaml
+---
+- versions: !include versions.yaml
+  compiler: "{{versions.compiler.name}}"
+  compiler_version: "{{versions.compiler.version}}"
+  mpi: "openmpi"
+  mpi_version: "{{versions.openmpi.version}}"
+  build:
+    modules:
+      - "{{compiler}}/{{compiler_version}}"
+  extras:
+  install:
+     makeinstall: >
+       mkdir -p $(ROOT){{root}};
+       make prefix={{root}} DESTDIR=$(ROOT) install
+     installextra: for x in {{extras}}; do  $(INSTALL) -m 644 $$x $(ROOT){{root}}; done
+  requires:
+    - "{{compiler}}_{{compiler_version}}"

@@ -1,17 +1,14 @@
-!include rcic-package.yaml
+!include common.yaml
 ---
 - package: openmpi 
   name: openmpi
   release: 3
   baserpm: "{{name}}_{{version}}_{{compiler}}_{{compiler_version}}"
-  versions: !include versions.yaml
   version: "{{versions.openmpi.version}}"
   version_major: "{{versions.openmpi.major}}"
   vendor_source: https://download.open-mpi.org/release/open-mpi/v{{version_major}}/{{name}}-{{version}}.{{extension}}
   ucxpath: "{{pkg_defaults.app_path}}/ucx/{{versions.ucx}}"
   root: "{{parent}}/{{version}}/{{compiler}}/{{compiler_version}}"
-  compiler: "{{versions.compiler}}"
-  compiler_version: "{{versions.compiler_version}}"
   addfile: mpiconfig.sh
   description: |
       OpenMPI version {{version}} compiled with UCX {{versions.ucx}}.
@@ -24,8 +21,10 @@
   build:
     configure: ../mpiconfig.sh 
     configure_args: --prefix={{root}} --with-verbs --with-hwloc=internal --with-singularity=$$singularity__PREFIX --with-ucx={{ucxpath}} --enable-orterun-prefix-by-default
-    modules: 
+    base_modules: 
       - "{{compiler}}/{{compiler_version}}"
+    modules: 
+      - "{{build.base_modules}}"
       - "singularity/{{versions.singularity}}"
     pkgmake: make -j 8
   install:

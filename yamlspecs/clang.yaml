@@ -1,8 +1,7 @@
-!include rcic-package.yaml
+!include common.yaml
 ---
 - package: clang 
   name: clang
-  versions: !include versions.yaml
   # Version tied to the version of llvm
   version: "{{versions.llvm}}" 
   extension: src.tar.xz
@@ -28,8 +27,6 @@
       - foundation 
       - "{{build.base_modules}}"
     pkgmake: ninja -C builddir
+  extras: README* LICENSE
   install:
     makeinstall: (cd builddir; cmake -DCMAKE_INSTALL_PREFIX=$(ROOT)/{{ root }} -P cmake_install.cmake) 
-    installextra: $(INSTALL) -m 644  README* LICENSE $(ROOT)/{{ root }}
-  requires:
-      - "{{compiler}}_{{compiler_version}}"

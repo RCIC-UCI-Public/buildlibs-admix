@@ -2,10 +2,6 @@
 ---
 - baserpm: "{{name}}_{{version}}_{{compiler}}_{{compiler_version}}_{{mpi}}_{{mpi_version}}"
   root: "{{pkg_defaults.app_path}}/{{name}}/{{version}}/{{compiler}}/{{compiler_version}}/{{mpi}}/{{mpi_version}}"
-  compiler: "{{versions.compiler}}"
-  compiler_version: "{{versions.compiler_version}}"
-  mpi: "openmpi"
-  mpi_version: "{{versions.openmpi.version}}"
   compileopts: "This is a parallel version compiled with gcc {{compiler_version}} and {{mpi}} version {{mpi_version}}"
   build:
     configure_args: --prefix={{root}} {{build.baseargs}} --enable-mpi

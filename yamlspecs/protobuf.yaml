@@ -1,11 +1,8 @@
-!include rcic-package.yaml
+!include common.yaml
 ---
 - package: protobuf 
   name: protobuf
-  versions: !include versions.yaml
   version: "{{versions.protobuf}}"
-  compiler: "{{versions.compiler}}"
-  compiler_version: "{{versions.compiler_version}}"
   vendor_source: https://github.com/protocolbuffers/protobuf/releases/download/v{{version}}/{{name}}-all-{{version}}.{{extension}}
   description: |
     Protocol Buffers {{version}} - Google's data interchange format 
@@ -16,9 +13,5 @@
     configure_args: >   
       --prefix={{root}}
     pkgmake: make
-    modules:
-      - "{{compiler}}/{{compiler_version}}"
   install:
     makeinstall: $(MAKE) DESTDIR=$(ROOT) install
-  requires:
-    - "{{compiler}}_{{compiler_version}}"
