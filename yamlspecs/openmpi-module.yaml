@@ -1,2 +1,6 @@
 !include openmpi.yaml
 !include mpi-module-generic.yaml
+---
+  module:
+    prereq: 
+      - "{{build.base_modules}}"
