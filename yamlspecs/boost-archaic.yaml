@@ -1,5 +1,5 @@
 !include boost.yaml
 ---
-- version: "{{versions.boost.ver_archaic}}"
-  version_enc: "{{versions.boost.enc_archaic}}"
+- version: "{{versions.boost_archaic}}"
+  version_enc: "{{versions.boost_enc_archaic}}"
   vendor_source: https://sourceforge.net/projects/{{name}}/files/{{name}}/{{version}}/boost_{{version_enc}}.{{extension}}/download

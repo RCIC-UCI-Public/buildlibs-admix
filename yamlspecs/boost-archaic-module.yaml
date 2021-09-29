@@ -1,4 +1,4 @@
 # Builds the module for boost archaic version
 !include boost-module.yaml
 ---
-- version: "{{versions.boost.ver_archaic}}"
+- version: "{{versions.boost_archaic}}"

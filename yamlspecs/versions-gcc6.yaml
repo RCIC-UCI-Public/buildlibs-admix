@@ -1,4 +1,4 @@
 !include versions.yaml
 ---
-compiler: "gcc"
-compiler_version: "6.5.0"
+compiler:
+  version: "6.5.0"

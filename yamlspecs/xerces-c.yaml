@@ -1,11 +1,9 @@
-!include rcic-package.yaml
+!include common.yaml
 ---
 - package: xerces-c
   name: xerces-c
   versions: !include versions.yaml
   version: "{{versions.xercesc}}" 
-  compiler: "{{versions.compiler}}"
-  compiler_version: "{{versions.compiler_version}}"
   vendor_source:  https://downloads.apache.org//xerces/c/3/sources/{{name}}-{{version}}.{{extension}}
   description: |
     Xerces C++ {{version}} is a sub-project of the Apache Xerces Project.
@@ -22,8 +20,6 @@
       - foundation 
       - "{{build.base_modules}}" 
     pkgmake: cd builddir; make -j 8
+  extras: README LICENSE
   install:
     makeinstall: (cd builddir; cmake -DCMAKE_INSTALL_PREFIX=$(ROOT)/{{root}} -P cmake_install.cmake) 
-    installextra: $(INSTALL) -m 644  README LICENSE $(ROOT)/{{root}}
-  requires:
-      - "{{compiler}}_{{compiler_version}}"

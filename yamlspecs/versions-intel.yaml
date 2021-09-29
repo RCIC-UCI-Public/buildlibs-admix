@@ -1,4 +1,5 @@
 !include versions.yaml
 ---
-compiler: "intel"
-compiler_version: "2020u1"
+compiler:
+  name: "intel"
+  version: "2020u1"

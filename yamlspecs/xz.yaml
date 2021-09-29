@@ -1,10 +1,7 @@
-!include rcic-package.yaml
+!include common.yaml
 ---
 - package: xz utils 
   name: xz
-  compiler: "{{versions.compiler}}"
-  compiler_version: "{{versions.compiler_version}}"
-  versions: !include versions.yaml
   version: "{{versions.xz}}"
   vendor_source: https://tukaani.org/xz/{{name}}-{{version}}.{{extension}}
   description: |
@@ -13,13 +10,7 @@
     XZ Utils are the successor to LZMA Utils. Compiled with gcc {{compiler_version}}
   build:
     configure: ./configure
-    configure_args: > 
-      --prefix={{root}}
-    modules:
-      - "{{compiler}}/{{compiler_version}}"
   install:
     makeinstall: >
        mkdir -p $(ROOT){{root}};
        make install DESTDIR=$(ROOT)
-  requires:
-    - "{{compiler}}_{{compiler_version}}"

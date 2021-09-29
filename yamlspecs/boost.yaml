@@ -3,8 +3,8 @@
 - package: boost 
   name: boost 
   baserpm: "{{name}}_{{version}}_{{compiler}}_{{compiler_version}}"
-  version: "{{versions.boost.ver}}"
-  version_enc: "{{versions.boost.enc}}"
+  version: "{{versions.boost}}"
+  version_enc: "{{versions.boost_enc}}"
   vendor_source: https://dl.bintray.com/boostorg/release/{{version}}/source/boost_{{version_enc}}.{{extension}}
   description: |
     The Boost version {{version}} project provides free peer-reviewed portable C++
