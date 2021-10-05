@@ -13,7 +13,7 @@
   build:
     preconfigure: sed -i "s/\$${MPIEXEC}/\$${MPIEXEC} --bind-to core/g" ./TESTING/CMakeLists.txt
     configure: > 
-      (mkdir builddir; cd builddir; cmake --prefix={{root}} ..)
+      (mkdir builddir; cd builddir; cmake ..)
     configure_args: 
     modules:
       - foundation 

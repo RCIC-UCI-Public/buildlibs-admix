@@ -2,7 +2,7 @@
 ---
 - package: llvm 
   name: llvm
-  release: 2
+  release: 10
   version: "{{versions.llvm}}" 
   extension: src.tar.xz
   vendor_source: https://github.com/llvm/llvm-project/releases/download/llvmorg-{{version}}/{{name}}-{{version}}.{{extension}}
@@ -11,13 +11,10 @@
     reusable compiler and toolchain technologies. Despite its name, LLVM
     has little to do with traditional virtual machines.  The name LLVM
     itself is not an acronym; it is the full name of the project
-  src_dir: "{{ name }}-{{ version }}.src"
+  src_dir: "{{name}}-{{version}}.src"
   build:
     configure: > 
-      (mkdir builddir; cd builddir; 
-      cmake -DCMAKE_BUILD_TYPE=RELEASE -G "Ninja" 
-      -DLLVM_INSTALL_UTILS=ON
-      --prefix={{ root }} ..)
+      (mkdir builddir; cd builddir; cmake -DCMAKE_BUILD_TYPE=RELEASE -G "Ninja" -DLLVM_INSTALL_UTILS=ON ..)
     configure_args:
     base_modules:
       - "{{compiler}}/{{compiler_version}}"
@@ -27,4 +24,4 @@
     pkgmake: ninja -C builddir
   extras: README* LICENSE
   install:
-    makeinstall: (cd builddir; cmake -DCMAKE_INSTALL_PREFIX=$(ROOT)/{{ root }} -DLLVM_INSTALL_UTILS=ON -P cmake_install.cmake) 
+    makeinstall: (cd builddir; cmake -DCMAKE_INSTALL_PREFIX=$(ROOT)/{{root}} -DLLVM_INSTALL_UTILS=ON -P cmake_install.cmake) 

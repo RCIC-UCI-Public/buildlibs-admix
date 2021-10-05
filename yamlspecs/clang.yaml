@@ -7,19 +7,17 @@
   extension: src.tar.xz
   vendor_source: https://github.com/llvm/llvm-project/releases/download/llvmorg-{{version}}/{{name}}-{{version}}.{{extension}}
   description: |
-    Clang version {{ version }}.  The Clang project provides a 
+    Clang version {{version}}.  The Clang project provides a 
     language front-end and tooling infrastructure for languages 
     in the C language family (C, C++, Objective C/C++, OpenCL,
     CUDA, and RenderScript) for the LLVM project. \n\n
     You will need to explicitly call clang as CC/CXX/CPP are defined
   compiler: llvm 
   compiler_version: "{{version}}"
-  src_dir: "{{ name }}-{{ version }}.src"
+  src_dir: "{{name}}-{{version}}.src"
   build:
     configure: > 
-      (mkdir builddir; cd builddir; 
-      cmake -DCMAKE_BUILD_TYPE=RELEASE -G "Ninja" 
-      --prefix={{ root }} ..)
+      (mkdir builddir; cd builddir; cmake -DCMAKE_BUILD_TYPE=RELEASE -G "Ninja" ..)
     configure_args:
     base_modules:
       - "{{compiler}}/{{compiler_version}}"
@@ -29,4 +27,4 @@
     pkgmake: ninja -C builddir
   extras: README* LICENSE
   install:
-    makeinstall: (cd builddir; cmake -DCMAKE_INSTALL_PREFIX=$(ROOT)/{{ root }} -P cmake_install.cmake) 
+    makeinstall: (cd builddir; cmake -DCMAKE_INSTALL_PREFIX=$(ROOT)/{{root}} -P cmake_install.cmake) 

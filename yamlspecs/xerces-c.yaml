@@ -12,7 +12,7 @@
     to read and write XML data.  See http://xerces.apache.org/xerces-c
   build:
     configure: > 
-      (mkdir builddir; cd builddir; cmake --prefix={{root}} ..)
+      (mkdir builddir; cd builddir; cmake ..)
     configure_args: 
     base_modules:
       - "{{compiler}}/{{compiler_version}}"
