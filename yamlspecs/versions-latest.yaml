@@ -2,4 +2,5 @@
 ---
 boost: "1.71.0"
 boost_enc: "1_71_0"
+boost_python: "{{versions.python3}}"
 llvm: "10.0.0"

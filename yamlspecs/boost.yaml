@@ -5,7 +5,7 @@
   baserpm: "{{name}}_{{version}}_{{compiler}}_{{compiler_version}}"
   version: "{{versions.boost}}"
   version_enc: "{{versions.boost_enc}}"
-  vendor_source: https://dl.bintray.com/boostorg/release/{{version}}/source/boost_{{version_enc}}.{{extension}}
+  vendor_source: https://boostorg.jfrog.io/artifactory/main/release/{{version}}/source/boost_{{version_enc}}.{{extension}}
   description: |
     The Boost version {{version}} project provides free peer-reviewed portable C++
     source libraries.  We emphasize libraries that work well with the C++ Standard Library.
@@ -16,10 +16,16 @@
   src_tarball: "{{name}}_{{version_enc}}.{{extension}}"
   src_dir: "{{name}}_{{version_enc}}"
   root: "{{pkg_defaults.app_path}}/{{name}}/{{version}}/{{compiler}}/{{compiler_version}}"
+  pyversion: "{{versions.boost_python}}"
   build:
     configure: ./bootstrap.sh 
     configure_args: 
-    pkgmake: ./b2 --with-iostreams 
+    modules:
+       - "{{mpi}}/{{mpi_version}}/{{compiler}}.{{compiler_version}}"
+       - python/{{pyversion}} 
+    pkgmake: >
+       echo "using mpi ;" >> project-config.jam;
+       ./b2
   install:
     makeinstall: >
       ./b2 --prefix=$(ROOT)/{{root}} install
