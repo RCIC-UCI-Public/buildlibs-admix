@@ -1,0 +1,5 @@
+!include versions.yaml
+---
+boost: "1.78.0"
+boost_enc: "1_78_0"
+boost_python: "{{versions.python3}}"

@@ -48,4 +48,4 @@ sets:
   - intel
   - gcc6
   - latest
-
+  - boost_extra
