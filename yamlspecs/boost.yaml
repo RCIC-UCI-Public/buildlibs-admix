@@ -29,4 +29,6 @@
        ./b2
   install:
     makeinstall: >
-      ./b2 --prefix=$(ROOT)/{{root}} install
+      ./b2 --prefix=$(ROOT)/{{root}} install;
+      for t in $$(find $(ROOT) -type f -exec grep -q '$(ROOT)' {} \; -print); 
+      do echo $$t; sed -i -e 's%$(ROOT)%%g' $$t; done
