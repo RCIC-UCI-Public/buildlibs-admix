@@ -2,6 +2,7 @@
 ---
 - package: boost 
   name: boost 
+  release: 4
   baserpm: "{{name}}_{{version}}_{{compiler}}_{{compiler_version}}"
   version: "{{versions.boost}}"
   version_enc: "{{versions.boost_enc}}"
