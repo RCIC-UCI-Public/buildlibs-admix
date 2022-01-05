@@ -26,9 +26,9 @@
     modules: 
       - "{{build.base_modules}}"
       - "singularity/{{versions.singularity}}"
-    pkgmake: make -j 8
+    pkgmake: unset MAKEFLAGS; make -j 8
   install:
-    makeinstall: unset F90; $(MAKE) DESTDIR=$(ROOT) install
+    makeinstall: unset F90; unset MAKEFLAGS; $(MAKE) DESTDIR=$(ROOT) install
   requires:
       - "ucx_{{versions.ucx}}"
       - "{{compiler}}_{{compiler_version}}"
