@@ -17,13 +17,11 @@
   src_tarball: "{{name}}_{{version_enc}}.{{extension}}"
   src_dir: "{{name}}_{{version_enc}}"
   root: "{{pkg_defaults.app_path}}/{{name}}/{{version}}/{{compiler}}/{{compiler_version}}"
-  pyversion: "{{versions.boost_python}}"
   build:
     configure: ./bootstrap.sh 
     configure_args: 
     modules:
        - "{{mpi}}/{{mpi_version}}/{{compiler}}.{{compiler_version}}"
-       - python/{{pyversion}} 
     pkgmake: >
        echo "using mpi ;" >> project-config.jam;
        ./b2

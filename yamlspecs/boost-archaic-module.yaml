@@ -1,4 +1,14 @@
 # Builds the module for boost archaic version
-!include boost-module.yaml
+!include boost-archaic.yaml
+!include rcic-module.yaml
 ---
-- version: "{{versions.boost_archaic}}"
+- package: boost module
+  category: TOOLS
+  module:
+    <<: *ModuleCompiler
+    prepend_path:
+      - LD_LIBRARY_PATH {{root}}/{{module.lib}}
+      - *Flagspath
+    setenv:
+      - *Setenv
+      - BOOST_HOME {{root}}

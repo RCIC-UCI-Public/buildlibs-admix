@@ -3,3 +3,7 @@
 - version: "{{versions.boost_archaic}}"
   version_enc: "{{versions.boost_enc_archaic}}"
   vendor_source: https://sourceforge.net/projects/{{name}}/files/{{name}}/{{version}}/boost_{{version_enc}}.{{extension}}/download
+  build:
+    modules:
+      - "{{compiler}}/{{compiler_version}}"
+    pkgmake: ./b2 --with-iostreams
