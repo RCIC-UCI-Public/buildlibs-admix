@@ -7,7 +7,7 @@
   version: "{{versions.openmpi.version}}"
   version_major: "{{versions.openmpi.major}}"
   vendor_source: https://download.open-mpi.org/release/open-mpi/v{{version_major}}/{{name}}-{{version}}.{{extension}}
-  ucxpath: "{{pkg_defaults.app_path}}/ucx/{{versions.ucx}}"
+  ucxpath: "$$UCX_DIR"
   root: "{{parent}}/{{version}}/{{compiler}}/{{compiler_version}}"
   addfile: mpiconfig.sh
   description: |
@@ -26,6 +26,7 @@
     modules: 
       - "{{build.base_modules}}"
       - "singularity/{{versions.singularity}}"
+      - "ucx/{{versions.ucx}}"
     pkgmake: unset MAKEFLAGS; make -j 8
   install:
     makeinstall: unset F90; unset MAKEFLAGS; $(MAKE) DESTDIR=$(ROOT) install
