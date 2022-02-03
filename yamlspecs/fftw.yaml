@@ -16,5 +16,6 @@
     baseargs: --enable-shared --enable-fma --enable-sse2 --enable-avx --enable-openmp --enable-threads
     configure: ./configure
     configure_args: --prefix={{root}} {{build.baseargs}}
+    pkgmake: unset MAKEFLAGS; make
   install:
     makeinstall: $(MAKE) DESTDIR=$(ROOT) install
