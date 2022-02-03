@@ -1,6 +1,6 @@
 !include site.yaml
 ---
-fftw: "3.3.8"
+fftw: "3.3.10"
 boost: "1.66.0"
 boost_enc: "1_66_0"
 boost_archaic: "1.50.0"
@@ -8,7 +8,7 @@ boost_enc_archaic: "1_50_0"
 openmpi:
   version: "4.1.2"
   major: "4.1"
-mpich: "3.4"
+mpich: "4.0"
 ucx: "1.12.0"
 singularity: "3.9.4"
 xz: "5.2.4"
