@@ -14,4 +14,15 @@
     as well as specific JTS enhanced functions. GEOS provides spatial 
     functionality to many other projects and products.
   build:
-    configure: ./configure
+    configure_args:
+    configure: >
+      sed -i "s/NAMELINK_SKIP//" CMakeLists.txt;
+      mkdir builddir;
+      cd builddir;
+      cmake -DCMAKE_BUILD_TYPE=Release ..
+    pkgmake:
+      make -j 8
+    modules:
+      - foundation
+  install:
+    makeinstall: cd builddir; cmake -DCMAKE_INSTALL_PREFIX=$(ROOT)/{{root}} -P cmake_install.cmake
