@@ -50,3 +50,4 @@ sets:
   - gcc6
   - latest
   - boost_extra
+  - centos8

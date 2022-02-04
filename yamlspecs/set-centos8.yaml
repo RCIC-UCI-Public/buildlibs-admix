@@ -1,0 +1,27 @@
+---
+versions: versions-centos8.yaml
+bootstrap:
+  - ucx
+  - ucx-module
+  - llvm
+  - llvm-module
+  - openmpi
+  - openmpi-module
+build:
+  - boost
+  - boost-module
+  - clang
+  - clang-module
+  - fftw
+  - fftw-module
+  - fftw-parallel
+  - fftw-parallel-module
+  - mpich
+  - mpich-module
+  - protobuf
+  - protobuf-module
+  - geos
+  - geos-module
+manifest:
+   - "{{bootstrap}}"
+   - "{{build}}"

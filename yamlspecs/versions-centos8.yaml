@@ -1,0 +1,15 @@
+!include versions.yaml
+---
+boost: "1.71.0"
+boost_enc: "1_71_0"
+ucx: "1.12.0"
+llvm: "13.0.0"
+geos: "3.10.2"
+xz: "5.2.5"
+protobuf: "3.19.4"
+fftw: "3.3.10"
+mpich: "4.0"
+openmpi:
+  version: "4.1.2"
+  major: "4.1"
+singularity: "3.9.4"
