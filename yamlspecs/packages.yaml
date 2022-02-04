@@ -10,6 +10,7 @@ system:
   - bzip2-devel
 bootstrap:
   - ucx
+  - ucx-module
   - llvm
   - llvm-module
   - openmpi

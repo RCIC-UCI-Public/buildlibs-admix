@@ -1,0 +1,8 @@
+!include ucx.yaml
+!include rcic-module.yaml
+---
+- package: ucx module
+  category: LIBRARIES
+  module:
+    setenv: 
+      - UCX_DIR {{root}}
