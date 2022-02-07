@@ -19,3 +19,13 @@ a6517d924be27b74dfe7f93ec3a4ce382aa47150  sources/xerces-c-3.2.3.tar.gz 1h263k5p
 3c5334d24f6cf6b99cb62c86150093c238acf587  sources/mpich-3.4.tar.gz 19o_XtibwTJwfgme9uNQTTE1cKtblB1nV
 c9b36ef68b9826239417eb46703408ecae44598f  sources/boost_1_50_0.tar.gz 1L7nw7RlJbC_5GYqNi8H98KO8aSez7RQx
 ff717ea23af2900e0ad3cae616b3e4ae43e68ad7  sources/boost_1_78_0.tar.gz 16BUfBrDA6vcC6nzhl2MQUGYS96jWdhbb
+c071f016b5e8965a52cea4f0905924aaf5495d49  sources/clang-13.0.0.src.tar.xz 1M1ATOmC6vwlh5xtPMB270glQAFwLRQ_h
+6abe7321c8c35ef52e56e299e66a9b967baf148a  sources/fftw-3.3.10.tar.gz 1m7YdKjwIrEZmM36PjajCd1-Nsq3R8aSc
+151cc0baa09639fd278eca5b4fc06cd27a28a4c8  sources/geos-3.10.2.tar.bz2 1JQnogV4XxFrVKwbaaHBfMHqTwlFYtnST
+0be63c8b3b44f3af49d9e57130f7b76a6040427c  sources/llvm-13.0.0.src.tar.xz 1wunbeEVrX2mASCG667al1wbHCR672gOi
+6517a7151cfff3ce4cb565a001d8d71d9fc29314  sources/mpich-4.0.tar.gz 1BiIFKHQur1XFxiv3hdKOcFOJJieRqptn
+3f4407c74506a894d03f7fd4faeb6e4277ebed42  sources/openmpi-4.1.2.tar.gz 1nWvbHD6TbZAVQfXNAR-DiCFxgAI38-Jc
+384d65361f1a552280383ace7824969235549433  sources/protobuf-3.19.4.tar.gz 1r7_KpiJmdnxZXFdW4rBhHMcGY_zUUPXK
+86ca686a6153c45073e87a4121e54bef17da8219  sources/ucx-1.12.0.tar.gz 1IcpX7RK59xobk3DxvXNzVtFkxN6LBHmb
+fa2ae4db119f639a01b02f99f1ba671ece2828eb  sources/xz-5.2.5.tar.gz 1wo2Hie4fFw91qENIR6qDHOG7KI3ilV30
+6f69c4bd59c0cd4aaf612f78988d7ac9826499b5  sources/xz-5.2.5.tar.gz.sig 1IlzA7Tv_5C6SLAzkaoO-B3myq6yfSFPE
