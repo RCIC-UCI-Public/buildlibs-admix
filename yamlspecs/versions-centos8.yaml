@@ -1,7 +1,9 @@
 !include versions.yaml
 ---
-boost: "1.71.0"
-boost_enc: "1_71_0"
+compiler:
+  version: "11.2.0"
+boost: "1.78.0"
+boost_enc: "1_78_0"
 ucx: "1.12.0"
 llvm: "13.0.0"
 geos: "3.10.2"
