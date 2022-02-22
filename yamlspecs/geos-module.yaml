@@ -4,6 +4,7 @@
 - package: geos module
   category: TOOLS
   module:
+    prereq:
     prepend_path:
       - *Prepend_path 
       - *Flagspath
