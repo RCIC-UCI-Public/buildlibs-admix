@@ -19,7 +19,7 @@
     base_modules:
       - "{{compiler}}/{{compiler_version}}"
     modules:
-      - foundation 
+      - foundation/{{versions.foundation}}
       - "{{build.base_modules}}" 
     pkgmake: ninja -C builddir
   extras: README* LICENSE

@@ -23,6 +23,6 @@
     pkgmake:
       make -j 8
     modules:
-      - foundation
+      - foundation/{{versions.foundation}}
   install:
     makeinstall: cd builddir; cmake -DCMAKE_INSTALL_PREFIX=$(ROOT)/{{root}} -P cmake_install.cmake

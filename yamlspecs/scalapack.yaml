@@ -16,7 +16,7 @@
       (mkdir builddir; cd builddir; cmake ..)
     configure_args: 
     modules:
-      - foundation 
+      - foundation/{{versions.foundation}}
       - "{{mpi}}/{{mpi_version}}/{{compiler}}.{{compiler_version}}"
     pkgmake: cd builddir; make -j
   extras: README LICENSE
