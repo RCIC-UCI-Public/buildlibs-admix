@@ -1,4 +1,5 @@
 ---
+site: !include site.yaml
 system:
   - numactl-devel
   - hwloc-devel
@@ -30,8 +31,8 @@ build:
   - mpich-module
   - protobuf
   - protobuf-module
-  - xz
-  - xz-module
+  - !ifeq "{{site.os_release}},7,xz,"
+  - !ifeq "{{site.os_release}},7,xz-module,"
   - geos
   - geos-module
   - scalapack
