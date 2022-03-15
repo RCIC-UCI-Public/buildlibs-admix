@@ -33,3 +33,4 @@
   requires:
       - "ucx_{{versions.ucx}}"
       - "{{compiler}}_{{compiler_version}}"
+  rpmBuildIdLinks: none
