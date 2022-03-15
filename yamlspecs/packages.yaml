@@ -50,3 +50,4 @@ sets:
   - latest
   - boost_extra
   - centos8
+  - centos8-intel

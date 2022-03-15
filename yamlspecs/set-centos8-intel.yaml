@@ -1,0 +1,10 @@
+---
+versions: versions-centos8-intel.yaml
+bootstrap:
+build:
+   - openmpi 
+   - openmpi-module 
+   - mpich
+   - mpich-module
+manifest:
+   - "{{build}}"
