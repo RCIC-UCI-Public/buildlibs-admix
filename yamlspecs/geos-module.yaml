@@ -4,7 +4,10 @@
 - package: geos module
   category: TOOLS
   module:
+    lib: "{{versions.geoslib}}"
     prereq:
     prepend_path:
       - *Prepend_path 
       - *Flagspath
+# NOTE: newer version installs libraries in lib64
+# For transition period have to specify lib for old and lib64 for new
