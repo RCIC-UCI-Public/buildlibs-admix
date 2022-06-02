@@ -21,8 +21,6 @@ build:
   - boost-module
   - boost-archaic
   - boost-archaic-module
-  - clang
-  - clang-module
   - fftw
   - fftw-module
   - fftw-parallel
@@ -51,3 +49,6 @@ sets:
   - boost_extra
   - centos8
   - centos8-intel
+# unused
+# - clang
+# - clang-module
