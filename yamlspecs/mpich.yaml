@@ -19,7 +19,7 @@
       user-defined data representations for I/O.
   build:
     configure: ../mpiconfig.sh 
-    configure_args: --prefix={{root}} --with-verbs --with-hwloc=embedded --enable-romio --with-ucx={{ucxpath}}
+    configure_args: --prefix={{root}} --with-verbs --with-hwloc=embedded --enable-romio --with-ucx={{ucxpath}} FCFLAGS=-fallow-argument-mismatch
     pkgmake: unset MAKEFLAGS; make -j 8
   install:
     makeinstall: unset F90; unset MAKEFLAGS; $(MAKE) DESTDIR=$(ROOT) install
