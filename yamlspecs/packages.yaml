@@ -47,8 +47,11 @@ sets:
   - gcc6
   - latest
   - boost_extra
+  - !ifeq "{{site.os_release}},8,{{sets_el8}},"
+sets_el8:
   - centos8
   - centos8-intel
+  - gcc8
 # unused
 # - clang
 # - clang-module

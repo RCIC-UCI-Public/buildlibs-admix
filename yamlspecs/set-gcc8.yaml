@@ -1,0 +1,8 @@
+---
+versions: versions-gcc8.yaml
+bootstrap:
+build:
+   - openmpi 
+   - openmpi-module 
+manifest:
+   - "{{build}}"

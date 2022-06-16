@@ -1,0 +1,4 @@
+!include versions-centos8.yaml
+---
+compiler:
+  version: "8.4.0"
