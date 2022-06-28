@@ -47,6 +47,7 @@ sets:
   - gcc6
   - latest
   - boost_extra
+  - mpich-extra
   - !ifeq "{{site.os_release}},8,{{sets_el8}},"
 sets_el8:
   - centos8

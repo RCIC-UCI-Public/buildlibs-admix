@@ -17,9 +17,11 @@
       has all MPI 3.1 functions and features required by the standard with
       the exception of support for the 'external32' portable I/O format and
       user-defined data representations for I/O.
+  fcflags: FCFLAGS=-fallow-argument-mismatch
+  opts: !ifeq "{{compiler_version}},11.2.0,{{fcflags}},"
   build:
     configure: ../mpiconfig.sh 
-    configure_args: --prefix={{root}} --with-verbs --with-hwloc=embedded --enable-romio --with-ucx={{ucxpath}} FCFLAGS=-fallow-argument-mismatch
+    configure_args: --prefix={{root}} --with-verbs --with-hwloc=embedded --enable-romio --with-ucx={{ucxpath}} {{opts}}
     pkgmake: unset MAKEFLAGS; make -j 8
   install:
     makeinstall: unset F90; unset MAKEFLAGS; $(MAKE) DESTDIR=$(ROOT) install
