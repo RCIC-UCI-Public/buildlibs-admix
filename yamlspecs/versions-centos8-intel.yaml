@@ -2,4 +2,4 @@
 ---
 compiler:
   name: "intel"
-  version: "2020u1"
+  version: "2022.2"
