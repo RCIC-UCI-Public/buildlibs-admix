@@ -4,6 +4,7 @@ f0b20d2d9f64041e8e7450600de0267244649766  sources/boost_1_66_0.tar.gz 1Nn7pi-gBR
 ff717ea23af2900e0ad3cae616b3e4ae43e68ad7  sources/boost_1_78_0.tar.gz 16BUfBrDA6vcC6nzhl2MQUGYS96jWdhbb
 0d72ce018c85c54fc709c7da71d3dd1463af0bfc  sources/clang-9.0.1.src.tar.xz 1WPufcJPg8hxOOCiLnjMRUupK-bXup1wv
 cfaa4c4e89a45b604e6f3057f984d73365074727  sources/clang-10.0.0.src.tar.xz 19eXMBlOkYyU7z2vqrslq_luQ_M8eN3nB
+feac618e2ad4389429dd1d7ade34cd8949a52d71  sources/clang-11.1.0.src.tar.xz 1W16QwVlbT-lNGW2KHVfwvp3ZImR9a8zv
 c071f016b5e8965a52cea4f0905924aaf5495d49  sources/clang-13.0.0.src.tar.xz 1M1ATOmC6vwlh5xtPMB270glQAFwLRQ_h
 59831bd4b2705381ee395e54aa6e0069b10c3626  sources/fftw-3.3.8.tar.gz 1PJ8qKycRKHTQhcivhjDXywAYq4Id_aEe
 6abe7321c8c35ef52e56e299e66a9b967baf148a  sources/fftw-3.3.10.tar.gz 1m7YdKjwIrEZmM36PjajCd1-Nsq3R8aSc
@@ -12,6 +13,7 @@ dbd165752dd4c48d81a84aa51c99d04410d96c67  sources/geos-3.8.1.tar.bz2 10LlmhYY2GC
 0451d180eed2b12b94aaae77e772d7573e87bec4  sources/lapack-3.9.0.tar.gz 1VPjk_VnR09iKulz96KamiMmIGfGkQ4nZ
 f7fcf3bd92d130784513c06efe6910f135372ce3  sources/llvm-9.0.1.src.tar.xz 1jQ6KHARGQSCRSAfj_sYeRtES4Flqbfzc
 85f2d89205fb190c61c8a98dad2a58e27a1540da  sources/llvm-10.0.0.src.tar.xz 1yOnVfQSedI82DjJuMzYyl8jnCNqO1LEj
+89c1aabaca65f00fd03db1b69d65fa64fcb2b812  sources/llvm-11.1.0.src.tar.xz 17wvmvm7DY2HZMoQWii1StNHBBiFuO3Sr
 0be63c8b3b44f3af49d9e57130f7b76a6040427c  sources/llvm-13.0.0.src.tar.xz 1wunbeEVrX2mASCG667al1wbHCR672gOi
 d1b887a6265df846481328bb1a6a0855b5292bef  sources/mpich-3.3.2.tar.gz 16kBEammFu4rVPwShzp9z1IRkAq4HBrt3
 3c5334d24f6cf6b99cb62c86150093c238acf587  sources/mpich-3.4.tar.gz 19o_XtibwTJwfgme9uNQTTE1cKtblB1nV
