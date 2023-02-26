@@ -1,0 +1,9 @@
+---
+versions: versions-2023.yaml
+bootstrap:
+build:
+  - geos
+  - geos-module
+manifest:
+   - "{{bootstrap}}"
+   - "{{build}}"
