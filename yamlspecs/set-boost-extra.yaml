@@ -1,5 +1,5 @@
 ---
-versions: versions-boost_extra.yaml
+versions: versions-boost-extra.yaml
 build:
    - boost
    - boost-module

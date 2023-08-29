@@ -1,5 +1,5 @@
 ---
-versions: versions-2023.yaml
+versions: versions-geos-extra.yaml
 bootstrap:
 build:
   - geos

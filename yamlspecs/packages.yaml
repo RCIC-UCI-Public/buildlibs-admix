@@ -46,14 +46,14 @@ sets:
   - intel
   - gcc6
   - latest
-  - boost_extra
+  - boost-extra
   - mpich-extra
   - !ifeq "{{site.os_release}},8,{{sets_el8}},"
 sets_el8:
   - centos8
   - centos8-intel
   - gcc8
-  - "2023"
+  - geos-extra
 # unused
 # - clang
 # - clang-module
