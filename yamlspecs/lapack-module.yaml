@@ -2,9 +2,11 @@
 !include rcic-module.yaml
 ---
 - package: lapack module
+  release: 2
   category: LIBRARIES
   module:
     setenv: 
       - LAPACK_DIR {{root}}
     prepend_path:
       - LD_LIBRARY_PATH {{root}}/{{module.lib}}
+    prereq:
