@@ -1,0 +1,11 @@
+!include llvm-project.yaml
+!include rcic-module.yaml
+---
+- package: LLVM module
+  category: COMPILERS
+  module:
+    setenv: 
+       - *Setenv
+       - LLVM_DIR {{root}}/lib/cmake/llvm
+    prereq: 
+      - "{{build.base_modules}}"

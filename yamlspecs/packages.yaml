@@ -54,6 +54,4 @@ sets_el8:
   - centos8-intel
   - gcc8
   - geos-extra
-# unused
-# - clang
-# - clang-module
+  - llvm-clang

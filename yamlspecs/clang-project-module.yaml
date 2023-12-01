@@ -1,0 +1,8 @@
+!include clang-project.yaml
+!include rcic-module.yaml
+---
+- package: Clang module
+  category: COMPILERS
+  module:
+    prereq: 
+      - "{{build.base_modules}}"

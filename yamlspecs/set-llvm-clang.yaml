@@ -1,0 +1,11 @@
+---
+versions: versions-llvm-clang.yaml
+bootstrap:
+  - llvm-project
+  - llvm-project-module
+build:
+  - clang-project
+  - clang-project-module
+manifest:
+   - "{{bootstrap}}"
+   - "{{build}}"
