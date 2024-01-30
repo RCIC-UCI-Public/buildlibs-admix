@@ -1,0 +1,28 @@
+!include ucx.yaml
+---
+- cuda: "{{versions.cuda.name}}"
+  cuda_version: "{{versions.cuda.version}}"
+  basefamily: "{{name}}_{{version}}"
+  baserpm: "{{basefamily}}_{{cuda}}_{{cuda_version}}"
+  root: "{{pkg_defaults.app_path}}/{{name}}/{{version}}/{{cuda}}/{{cuda_version}}"
+  build:
+    modules:
+      - gdrcopy/{{versions.gdrcopy}}
+      - cuda/{{cuda_version}}
+    preconfigure: ./autogen.sh
+    configure: CFLAGS="-fPIC" ./contrib/configure-release
+    configure_args: >   
+       --prefix={{root}}
+       --with-rc 
+       --with-ud     
+       --with-dc             
+       --with-ib-hw-tm        
+       --with-dm               
+       --with-cuda=$$CUDA_PATH               
+       --with-gdrcopy=$$GDRCOPY_DIR
+       --with-iodemo-cuda
+    pkgmake: make -j 8
+
+# requires:
+#   - cuda-toolkit_{{versions.cuda.version}}
+#   - gdrcopy_{{versions.gdrcopy}}

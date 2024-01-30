@@ -1,0 +1,7 @@
+---
+versions: versions-ucx.yaml
+build:
+   - ucx-cuda
+   - ucx-cuda-module
+manifest:
+   - "{{build}}"

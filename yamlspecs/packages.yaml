@@ -55,3 +55,4 @@ sets_el8:
   - gcc8
   - geos-extra
   - llvm-clang
+  - ucx

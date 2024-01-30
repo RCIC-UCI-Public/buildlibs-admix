@@ -1,0 +1,5 @@
+!include versions.yaml
+!include updates8.yaml
+---
+ucx: "1.15.0"
+gdrcopy: "2.4.1"
