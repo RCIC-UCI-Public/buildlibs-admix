@@ -1,2 +1,4 @@
 !include mpich.yaml
 !include mpi-module-generic.yaml
+---
+- release: 3

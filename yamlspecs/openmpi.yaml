@@ -2,7 +2,7 @@
 ---
 - package: openmpi 
   name: openmpi
-  release: 3
+  release: "{{versions.openmpi.rel}}"
   baserpm: "{{name}}_{{version}}_{{compiler}}_{{compiler_version}}"
   version: "{{versions.openmpi.version}}"
   version_major: "{{versions.openmpi.major}}"
@@ -17,7 +17,7 @@
       Open MPI is therefore able to combine the expertise, technologies, and resources from all
       across the High Performance Computing community in order to build the best MPI library
       available. Open MPI offers advantages for system and software vendors, application
-      developers and computer science researchers
+      developers and computer science researchers. See https://www.open-mpi.org for details
   build:
     configure: ../mpiconfig.sh 
     configure_args: --prefix={{root}} --with-verbs --with-hwloc=internal --with-singularity=$$singularity__PREFIX --with-ucx={{ucxpath}} --enable-orterun-prefix-by-default

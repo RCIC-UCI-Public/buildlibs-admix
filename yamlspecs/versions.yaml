@@ -8,6 +8,7 @@ boost_enc_archaic: "1_50_0"
 openmpi:
   version: "4.0.3"
   major: "4.0"
+  rel: "3"
 mpich: "3.4"
 ucx: "1.8.0"
 singularity: "3.4.1"

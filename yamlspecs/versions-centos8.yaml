@@ -16,4 +16,5 @@ mpich: "4.0"
 openmpi:
   version: "4.1.2"
   major: "4.1"
+  rel: "3"
 singularity: "3.9.4"
