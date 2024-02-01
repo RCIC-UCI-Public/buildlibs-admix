@@ -3,3 +3,8 @@
 ---
 ucx: "1.15.0"
 gdrcopy: "2.4.1"
+openmpi:
+  version: "5.0.1"
+  major: "5.0"
+  rel: "1"
+  cudaaware: yes

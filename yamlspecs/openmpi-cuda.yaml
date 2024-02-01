@@ -1,0 +1,25 @@
+!include openmpi.yaml
+---
+- cuda: "{{versions.cuda.name}}"
+  cuda_version: "{{versions.cuda.version}}"
+  cuda_requires: cuda-toolkit_{{versions.cuda.version}}
+  basefamily: "{{name}}_{{version}}_{{compiler}}_{{compiler_version}}"
+  baserpm: "{{basefamily}}_{{cuda}}_{{cuda_version}}"
+  baseroot: "{{pkg_defaults.app_path}}/{{name}}/{{version}}/{{compiler}}/{{compiler_version}}"
+  root: "{{baseroot}}/{{cuda}}/{{cuda_version}}"
+  ucxpath: "$$UCX_DIR"
+  cudasupport: !ifeq "{{versions.openmpi.cudaaware}},yes,--with-cuda=$$CUDA_PATH,"
+  build:
+    configure_args: --prefix={{root}} --with-verbs --with-hwloc=internal --with-singularity=$$singularity__PREFIX --with-ucx={{ucxpath}} --enable-orterun-prefix-by-default {{cudasupport}}
+    base_modules: 
+      - "{{compiler}}/{{compiler_version}}"
+      - "{{cuda}}/{{cuda_version}}"
+    modules:
+      - "{{build.base_modules}}"
+      - "singularity/{{versions.singularity}}"
+      - "ucx/{{versions.ucx}}/cuda.{{cuda_version}}"
+  requires:
+      - "ucx_{{versions.ucx}}_{{cuda}}_{{cuda_version}}"
+      - "{{compiler}}_{{compiler_version}}"
+      - "{{cuda_requires}}"
+  rpmBuildIdLinks: none

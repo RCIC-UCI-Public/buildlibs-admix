@@ -1,0 +1,8 @@
+!include openmpi-cuda.yaml
+!include mpi-module-generic.yaml
+---
+  module:
+    logname: "{{name}}/{{version}}/{{compiler}}.{{compiler_version}}-{{cuda}}.{{cuda_version}}"
+    name: "{{compiler}}.{{compiler_version}}-{{cuda}}.{{cuda_version}}"
+    prereq: 
+      - "{{build.base_modules}}"
