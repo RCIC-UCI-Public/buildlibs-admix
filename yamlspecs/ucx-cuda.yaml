@@ -13,6 +13,11 @@
     configure: CFLAGS="-fPIC" ./contrib/configure-release
     configure_args: >   
        --prefix={{root}}
+       --enable-optimizations
+       --with-avx
+       --enable-mt
+       --without-java
+       --with-numa=/usr/bin/numactl
        --with-rc 
        --with-ud     
        --with-dc             

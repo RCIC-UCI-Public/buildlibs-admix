@@ -1,6 +1,7 @@
 ---
 site: !include site.yaml
 system:
+  - numactl
   - numactl-devel
   - hwloc-devel
   - libibverbs-devel
