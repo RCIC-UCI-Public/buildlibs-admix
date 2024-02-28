@@ -4,6 +4,7 @@
 ---
 - package: boost module
   category: TOOLS
+  release: 5
   module:
     <<: *ModuleCompiler
     prepend_path:
@@ -12,3 +13,4 @@
     setenv:
       - *Setenv
       - BOOST_HOME {{root}}
+      - BOOST_ROOT {{root}}
