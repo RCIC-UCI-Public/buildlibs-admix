@@ -20,12 +20,8 @@ bootstrap:
 build:
   - boost
   - boost-module
-  - boost-archaic
-  - boost-archaic-module
   - fftw
   - fftw-module
-  - fftw-parallel
-  - fftw-parallel-module
   - mpich
   - mpich-module
   - protobuf

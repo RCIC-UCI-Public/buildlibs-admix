@@ -1,5 +1,3 @@
 !include versions.yaml
 ---
-boost: "1.71.0"
-boost_enc: "1_71_0"
 llvm: "11.1.0"

@@ -1,0 +1,11 @@
+# only list unused  removed packages
+#in versions.yaml
+#boost_archaic: "1.50.0"
+#boost_enc_archaic: "1_50_0"
+
+# in versions-latest.yaml
+#boost: "1.71.0"
+
+# in versions-centos8.yaml
+#xz: "5.2.5"
+

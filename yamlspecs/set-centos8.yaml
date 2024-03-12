@@ -22,8 +22,6 @@ build:
   - protobuf-module
   - geos
   - geos-module
-  - xz
-  - xz-module
 manifest:
    - "{{bootstrap}}"
    - "{{build}}"

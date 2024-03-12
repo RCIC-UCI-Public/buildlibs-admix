@@ -6,8 +6,6 @@ bootstrap:
 build:
    - clang 
    - clang-module 
-   - boost
-   - boost-module
 manifest:
    - "{{bootstrap}}"
    - "{{build}}"
