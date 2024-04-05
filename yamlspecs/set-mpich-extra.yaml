@@ -1,7 +1,0 @@
----
-versions: versions-mpich-extra.yaml
-build:
-   - mpich
-   - mpich-module
-manifest:
-   - "{{build}}"

@@ -1,7 +1,0 @@
----
-versions: versions-boost-extra.yaml
-build:
-   - boost
-   - boost-module
-manifest:
-   - "{{build}}"

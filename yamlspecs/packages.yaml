@@ -42,9 +42,7 @@ sets:
   - system
   - intel
   - gcc6
-  - latest
-  - boost-extra
-  - mpich-extra
+  - extra
   - !ifeq "{{site.os_release}},8,{{sets_el8}},"
 sets_el8:
   - centos8

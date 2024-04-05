@@ -1,11 +1,15 @@
 ---
-versions: versions-latest.yaml
+versions: versions-extra.yaml
 bootstrap:
    - llvm
    - llvm-module
 build:
    - clang 
    - clang-module 
+   - boost
+   - boost-module
+   - mpich
+   - mpich-module
 manifest:
    - "{{bootstrap}}"
    - "{{build}}"
