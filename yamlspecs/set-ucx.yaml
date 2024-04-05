@@ -1,6 +1,10 @@
 ---
 versions: versions-ucx.yaml
 bootstrap:
+   - ucx
+   - ucx-module
+   - openmpi
+   - openmpi-module
    - ucx-cuda
    - ucx-cuda-module
    - openmpi-cuda

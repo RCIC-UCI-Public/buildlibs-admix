@@ -1,10 +1,14 @@
 !include versions.yaml
 !include updates8.yaml
 ---
-ucx: "1.15.0"
+ucx:
+  version: "1.15.0"
+  rel: "1"
+  confargs: yes
 gdrcopy: "2.4.1"
 openmpi:
   version: "5.0.1"
   major: "5.0"
   rel: "1"
   cudaaware: yes
+singularity: "3.9.4"

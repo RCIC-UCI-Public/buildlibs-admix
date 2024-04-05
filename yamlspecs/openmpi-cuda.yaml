@@ -17,9 +17,9 @@
     modules:
       - "{{build.base_modules}}"
       - "singularity/{{versions.singularity}}"
-      - "ucx/{{versions.ucx}}/cuda.{{cuda_version}}"
+      - "ucx/{{versions.ucx.version}}/cuda.{{cuda_version}}"
   requires:
-      - "ucx_{{versions.ucx}}_{{cuda}}_{{cuda_version}}"
+      - "ucx_{{versions.ucx.version}}_{{cuda}}_{{cuda_version}}"
       - "{{compiler}}_{{compiler_version}}"
       - "{{cuda_requires}}"
   rpmBuildIdLinks: none

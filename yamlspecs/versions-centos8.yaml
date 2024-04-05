@@ -5,7 +5,10 @@ compiler:
   version: "11.2.0"
 boost: "1.78.0"
 boost_enc: "1_78_0"
-ucx: "1.12.0"
+ucx:
+  version: "1.12.0"
+  rel: "2"
+  confargs:
 llvm: "13.0.0"
 geos: "3.10.2"
 geoslib: "lib64"
@@ -15,5 +18,5 @@ mpich: "4.0"
 openmpi:
   version: "4.1.2"
   major: "4.1"
-  rel: "3"
+  rel: "4"
 singularity: "3.9.4"

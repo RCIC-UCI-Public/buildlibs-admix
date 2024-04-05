@@ -6,9 +6,12 @@ boost_enc: "1_66_0"
 openmpi:
   version: "4.0.3"
   major: "4.0"
-  rel: "3"
+  rel: "4"
 mpich: "3.4"
-ucx: "1.8.0"
+ucx:
+  version: "1.8.0"
+  rel: "2"
+  confargs:
 singularity: "3.4.1"
 xz: "5.2.4"
 protobuf: "3.11.4"
