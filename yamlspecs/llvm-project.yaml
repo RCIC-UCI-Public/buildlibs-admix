@@ -14,7 +14,7 @@
   src_dir: "{{name}}-project-{{version}}.src"
   build:
     configure: > 
-      (mkdir {{name}}/builddir; cd {{name}}/builddir; cmake -DCMAKE_BUILD_TYPE=RELEASE -G "Ninja" -DLLVM_INSTALL_UTILS=ON ..)
+      (mkdir {{name}}/builddir; cd {{name}}/builddir; cmake -DCMAKE_BUILD_TYPE=RELEASE -G "Ninja" -DLLVM_INSTALL_UTILS=ON -DLLVM_INSTALL_GTEST=on ..)
     configure_args:
     base_modules:
       - "{{compiler}}/{{compiler_version}}"
