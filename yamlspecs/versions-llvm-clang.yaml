@@ -3,4 +3,4 @@
 ---
 compiler:
   version: "11.2.0"
-llvm: "16.0.1"
+llvm: "18.1.4"
