@@ -1,0 +1,8 @@
+---
+versions: versions-2024.yaml
+bootstrap:
+build:
+  - libgit2
+  - libgit2-module
+manifest:
+   - "{{build}}"

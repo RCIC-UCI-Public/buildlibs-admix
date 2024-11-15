@@ -1,0 +1,7 @@
+!include versions.yaml
+!include updates8.yaml
+---
+compiler:
+  version: "11.2.0"
+libgit2: "1.8.4"
+libgit2lib: "lib64"

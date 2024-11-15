@@ -51,3 +51,4 @@ sets_el8:
   - geos-extra
   - llvm-clang
   - ucx
+  - "2024"

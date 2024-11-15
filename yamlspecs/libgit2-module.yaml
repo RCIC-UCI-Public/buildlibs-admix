@@ -1,0 +1,16 @@
+!include libgit2.yaml
+!include rcic-module.yaml
+---
+- package: libgit2 module
+  category: TOOLS
+  release: 1
+  module:
+    lib: "{{versions.libgit2lib}}"
+    prepend_path:
+      - PATH {{root}}/bin
+      - LD_LIBRARY_PATH {{root}}/{{module.lib}}
+      - PKG_CONFIG_PATH {{root}}/{{module.lib}}/pkgconfig
+      - *Flagspath
+    prereq:
+      - "{{build.base_modules}}"
+
