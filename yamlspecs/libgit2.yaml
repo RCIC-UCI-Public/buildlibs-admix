@@ -19,7 +19,7 @@
       - "{{compiler}}/{{compiler_version}}"
 #     - python/{{versions.python3}}
     modules:
-      - foundation/{{versions.foundation}}
+      - cmake/{{versions.cmake}}
       - "{{build.base_modules}}"
     pkgmake: unset MAKEFLAGS; make -j 8
   extras: README* 

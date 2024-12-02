@@ -17,7 +17,7 @@
     base_modules:
       - "{{compiler}}/{{compiler_version}}"
     modules:
-      - foundation 
+      - cmake/{{versions.cmake}} 
       - "{{build.base_modules}}" 
     pkgmake: cd builddir; make -j 8
   extras: README LICENSE
