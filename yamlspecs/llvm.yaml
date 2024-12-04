@@ -20,6 +20,7 @@
       - "{{compiler}}/{{compiler_version}}"
     modules:
       - cmake/{{versions.cmake}}
+      - ninja/{{versions.ninja}}
       - "{{build.base_modules}}" 
     pkgmake: ninja -C builddir
   extras: README* LICENSE
