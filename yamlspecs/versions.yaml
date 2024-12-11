@@ -12,7 +12,7 @@ ucx:
   version: "1.8.0"
   rel: "2"
   confargs:
-singularity: "3.4.1"
+singularity: "3.7.2"
 xz: "5.2.4"
 protobuf: "3.11.4"
 llvm: "9.0.1"
