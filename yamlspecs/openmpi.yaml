@@ -22,12 +22,13 @@
       developers and computer science researchers. See https://www.open-mpi.org for details
   build:
     configure: ../mpiconfig.sh 
-    configure_args: --prefix={{root}} --with-verbs --with-hwloc=internal --with-singularity=$$singularity__PREFIX --with-ucx={{ucxpath}} --enable-orterun-prefix-by-default
+    singularity: !ifeq "{{versions.singularity}},3.4.1,,--with-singularity=$$singularity__PREFIX"
+    configure_args: --prefix={{root}} --with-verbs --with-hwloc=internal {{build.singularity}} --with-ucx={{ucxpath}} --enable-orterun-prefix-by-default
     base_modules: 
       - "{{compiler}}/{{compiler_version}}"
     modules: 
       - "{{build.base_modules}}"
-      - "singularity/{{versions.singularity}}"
+      - !ifeq "{{versions.singularity}},3.4.1,,singularity/{{versions.singularity}}"
       - ucx/{{ucxversion}}/{{ucxcompiler}}
     pkgmake: unset MAKEFLAGS; make -j 8
   install:
