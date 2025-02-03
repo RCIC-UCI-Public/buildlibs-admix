@@ -1,3 +1,4 @@
+!include packages.yaml
 ---
 versions: versions-system.yaml
 bootstrap:

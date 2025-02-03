@@ -1,3 +1,4 @@
+!include packages.yaml
 ---
 versions: versions-gcc8.yaml
 bootstrap:

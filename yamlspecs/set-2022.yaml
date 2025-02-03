@@ -1,0 +1,16 @@
+!include packages.yaml
+---
+versions: versions-2022.yaml
+bootstrap:
+   - llvm
+   - llvm-module
+build:
+   - clang 
+   - clang-module 
+   - boost
+   - boost-module
+   - mpich
+   - mpich-module
+manifest:
+   - "{{bootstrap}}"
+   - "{{build}}"

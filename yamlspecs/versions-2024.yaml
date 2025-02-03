@@ -5,3 +5,17 @@ compiler:
   version: "11.2.0"
 libgit2: "1.8.4"
 libgit2lib: "lib64"
+geos: "3.11.1"
+geoslib: "lib64"
+llvm: "18.1.4"
+ucx:
+  version: "1.15.0"
+  rel: "1"
+  confargs: yes
+gdrcopy: "2.4.1"
+openmpi:
+  version: "5.0.1"
+  major: "5.0"
+  rel: "1"
+  cudaaware: yes
+singularity: "3.9.4"

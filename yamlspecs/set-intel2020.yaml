@@ -1,5 +1,6 @@
+!include packages.yaml
 ---
-versions: versions-intel.yaml
+versions: versions-intel2020.yaml
 bootstrap:
 build:
    - openmpi 

@@ -1,8 +1,24 @@
+!include packages.yaml
 ---
 versions: versions-2024.yaml
 bootstrap:
+  - ucx
+  - ucx-module
+  - ucx-cuda
+  - ucx-cuda-module
+  - openmpi
+  - openmpi-module
+  - openmpi-cuda
+  - openmpi-cuda-module
+  - llvm-project
+  - llvm-project-module
 build:
+  - clang-project
+  - clang-project-module
+  - geos
+  - geos-module
   - libgit2
   - libgit2-module
 manifest:
+   - "{{bootstrap}}"
    - "{{build}}"

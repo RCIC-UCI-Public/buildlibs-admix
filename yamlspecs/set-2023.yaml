@@ -1,5 +1,6 @@
+!include packages.yaml
 ---
-versions: versions-centos8.yaml
+versions: versions-2023.yaml
 bootstrap:
   - ucx
   - ucx-module

@@ -26,8 +26,6 @@ build:
   - mpich-module
   - protobuf
   - protobuf-module
-  - !ifeq "{{site.os_release}},7,xz,"
-  - !ifeq "{{site.os_release}},7,xz-module,"
   - geos
   - geos-module
   - scalapack
@@ -40,15 +38,10 @@ manifest:
   - "{{system}}"
 sets:
   - system
-  - intel
   - gcc6
-  - extra
-  - !ifeq "{{site.os_release}},8,{{sets_el8}},"
-sets_el8:
-  - centos8
-  - centos8-intel
   - gcc8
-  - geos-extra
-  - llvm-clang
-  - ucx
+  - intel2020
+  - intel2022
+  - "2022"
+  - "2023"
   - "2024"

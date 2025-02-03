@@ -1,5 +1,6 @@
+!include packages.yaml
 ---
-versions: versions-centos8-intel.yaml
+versions: versions-intel2022.yaml
 bootstrap:
 build:
    - openmpi 
