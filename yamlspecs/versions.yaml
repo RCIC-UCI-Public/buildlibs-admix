@@ -1,5 +1,6 @@
 !include site.yaml
 ---
+admix: buildlibs-admix
 fftw: "3.3.8"
 boost: "1.66.0"
 boost_enc: "1_66_0"
