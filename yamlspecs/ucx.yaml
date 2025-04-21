@@ -18,7 +18,9 @@
   addfile: mpiconfig.sh
   build:
     preconfigure: ./autogen.sh
-    configure: CFLAGS="-fPIC" ../mpiconfig.sh
+    ## Need an older compiler to build version 1.8.0
+    ucxcompiler: !ifeq "{{version}},1.8.0,module load {{versions.ucx.compiler}};,"
+    configure: "{{build.ucxcompiler}} CFLAGS='-fPIC' ../mpiconfig.sh"
     configure_args: >   
        --prefix={{root}}
        --with-rc
