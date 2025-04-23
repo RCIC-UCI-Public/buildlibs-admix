@@ -40,7 +40,7 @@ sets:
   - system
   - gcc6
   - gcc8
-  - intel2020
+  - !eval "'intel2020' if {{site.os_release}} <= 8 else ''"
   - intel2022
   - "2022"
   - "2023"
