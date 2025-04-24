@@ -2,3 +2,7 @@
 ---
 compiler: 
   version: "{{versions.compiler_sys.version}}"
+ucx:
+  version: "1.12.0"
+  rel: "2"
+  confargs:
