@@ -9,4 +9,3 @@
        - *Setenv
        - LLVM_DIR {{root}}/lib/cmake/llvm
     prereq: 
-      - "{{build.base_modules}}"
