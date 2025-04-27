@@ -12,5 +12,4 @@
       - PKG_CONFIG_PATH {{root}}/{{module.lib}}/pkgconfig
       - *Flagspath
     prereq:
-      - "{{build.base_modules}}"
 
