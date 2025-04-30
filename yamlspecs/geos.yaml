@@ -2,9 +2,12 @@
 ---
 - package: geos 
   name: geos 
+  baserpm: "{{name}}_{{version}}_{{compiler}}_{{compiler_version}}"
   versions: !include versions.yaml
   version: "{{versions.geos}}"
   extension: tar.bz2
+  compiler: "{{versions.compiler.name}}"
+  compiler_version: "{{versions.compiler.version}}"
   vendor_source: http://download.osgeo.org/{{name}}/{{name}}-{{version}}.{{extension}}
   description: |
     GEOS version {{version}} (Geometry Engine - Open Source) is a C++ 
@@ -22,7 +25,10 @@
       cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX={{root}} ..
     pkgmake:
       make -j 8
+    base_modules:
+      - "{{compiler}}/{{compiler_version}}"
     modules:
+      - "{{build.base_modules}}"
       - cmake/{{versions.cmake}}
   install:
     makeinstall: cd builddir; cmake -DCMAKE_INSTALL_PREFIX=$(ROOT)/{{root}} -P cmake_install.cmake

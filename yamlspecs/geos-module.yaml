@@ -4,8 +4,10 @@
 - package: geos module
   category: TOOLS
   module:
+    <<: *ModuleCompiler
     lib: "{{versions.geoslib}}"
     prereq:
+      - "{{build.base_modules}}"
     prepend_path:
       - *Prepend_path 
       - *Flagspath
