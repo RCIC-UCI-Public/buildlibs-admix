@@ -24,3 +24,8 @@ scalapack: "2.1.0"
 lapack: "3.9.0"
 xercesc: "3.2.3"
 ninja: "1.10.2"
+# needed for older base build 
+# boost, fftw, mpich, geos, openmpi
+compiler:
+  name: gcc
+  version: "8.4.0"
