@@ -2,6 +2,7 @@
 ---
 - package: geos 
   name: geos 
+  root: "{{parent}}/{{version}}/{{compiler}}.{{compiler_version}}"
   baserpm: "{{name}}_{{version}}_{{compiler}}_{{compiler_version}}"
   versions: !include versions.yaml
   version: "{{versions.geos}}"
