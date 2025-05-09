@@ -1,0 +1,28 @@
+!include packages.yaml
+---
+versions: versions.yaml
+bootstrap:
+  - ucx
+  - ucx-module
+  - llvm
+  - llvm-module
+  - openmpi
+  - openmpi-module
+build:
+  - boost
+  - boost-module
+  - fftw
+  - fftw-module
+  - mpich
+  - mpich-module
+  - protobuf
+  - protobuf-module
+  - geos
+  - geos-module
+  - scalapack
+  - scalapack-module
+  - lapack
+  - lapack-module
+manifest:
+  - "{{build}}"
+  - "{{bootstrap}}"
