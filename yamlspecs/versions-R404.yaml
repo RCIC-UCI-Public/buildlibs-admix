@@ -1,0 +1,5 @@
+!include versions.yaml
+---
+compiler:
+  name: gcc
+  version: "11.2.0"
