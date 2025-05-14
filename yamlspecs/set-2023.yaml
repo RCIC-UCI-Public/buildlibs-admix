@@ -2,8 +2,6 @@
 ---
 versions: versions-2023.yaml
 bootstrap:
-  - ucx
-  - ucx-module
   - llvm
   - llvm-module
   - openmpi
