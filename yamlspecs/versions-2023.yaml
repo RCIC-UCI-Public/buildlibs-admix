@@ -5,6 +5,10 @@ compiler:
   version: "11.2.0"
 boost: "1.78.0"
 boost_enc: "1_78_0"
+ucx:
+  version: "1.12.0"
+  rel: "2"
+  confargs:
 llvm: "13.0.0"
 geos: "3.10.2"
 geoslib: "lib64"
