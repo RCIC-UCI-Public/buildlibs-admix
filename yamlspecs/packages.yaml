@@ -11,6 +11,8 @@ system:
   - automake
   - bzip2-devel
 bootstrap:
+  - ucx
+  - ucx-module
 build:
 manifest:
   - "{{build}}"

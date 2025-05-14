@@ -1,6 +1,6 @@
 !include packages.yaml
 ---
-versions: versions.yaml
+versions: versions-base.yaml
 bootstrap:
   - ucx
   - ucx-module
