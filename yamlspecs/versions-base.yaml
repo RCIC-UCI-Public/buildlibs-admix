@@ -1,0 +1,8 @@
+!include versions.yaml
+---
+ucx:
+  version: "1.8.0"
+  rel: "2"
+  confargs:
+  compiler: "gcc/8.4.0"
+

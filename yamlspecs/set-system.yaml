@@ -2,8 +2,6 @@
 ---
 versions: versions-system.yaml
 bootstrap:
-   - ucx
-   - ucx-module
 build:
    - fftw
    - fftw-module

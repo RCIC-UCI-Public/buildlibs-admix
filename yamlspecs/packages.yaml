@@ -11,6 +11,8 @@ system:
   - automake
   - bzip2-devel
 bootstrap:
+  - ucx
+  - ucx-module
 build:
 manifest:
   - "{{build}}"
@@ -26,4 +28,3 @@ sets:
   - "2022"
   - "2023"
   - "2024"
-  - !eval "'R404' if {{site.os_release}} >= 9 else ''"
