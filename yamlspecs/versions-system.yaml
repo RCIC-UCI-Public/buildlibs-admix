@@ -2,6 +2,7 @@
 ---
 compiler: 
   version: "{{versions.compiler_sys.version}}"
+mpich: "4.0"
 ucx:
   version: "1.12.0"
   rel: "2"

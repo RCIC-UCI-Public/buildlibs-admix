@@ -18,7 +18,7 @@
       the exception of support for the 'external32' portable I/O format and
       user-defined data representations for I/O.
   fcflags: FCFLAGS=-fallow-argument-mismatch
-  opts: !ifeq "{{compiler_version}},11.2.0,{{fcflags}},"
+  opts: !eval "'{{fcflags}}' if '{{compiler_version}}' == 'system' else ''"
   build:
     configure: ../mpiconfig.sh 
     configure_args: --prefix={{root}} --with-verbs --with-hwloc=embedded --enable-romio --with-ucx={{ucxpath}} {{opts}}

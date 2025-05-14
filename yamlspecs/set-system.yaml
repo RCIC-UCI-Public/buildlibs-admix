@@ -3,7 +3,9 @@
 versions: versions-system.yaml
 bootstrap:
 build:
-   - fftw
+   - mpich
+   - mpich-module
+   - fftw-module
    - fftw-module
 manifest:
    - "{{build}}"

@@ -10,7 +10,6 @@ geos: "3.10.2"
 geoslib: "lib64"
 protobuf: "3.19.4"
 fftw: "3.3.10"
-mpich: "4.0"
 openmpi:
   version: "4.1.2"
   major: "4.1"

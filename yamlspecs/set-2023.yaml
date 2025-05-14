@@ -15,8 +15,6 @@ build:
   - fftw-module
   - fftw-parallel
   - fftw-parallel-module
-  - mpich
-  - mpich-module
   - protobuf
   - protobuf-module
   - geos
