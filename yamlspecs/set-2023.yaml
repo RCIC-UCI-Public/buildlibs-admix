@@ -15,8 +15,8 @@ build:
   - fftw-module
   - fftw-parallel
   - fftw-parallel-module
-  - protobuf
-  - protobuf-module
+# - protobuf
+# - protobuf-module
   - geos
   - geos-module
 manifest:

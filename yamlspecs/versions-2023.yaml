@@ -8,7 +8,7 @@ boost_enc: "1_78_0"
 llvm: "13.0.0"
 geos: "3.10.2"
 geoslib: "lib64"
-protobuf: "3.19.4"
+#protobuf: "3.19.4"
 fftw: "3.3.10"
 openmpi:
   version: "4.1.2"

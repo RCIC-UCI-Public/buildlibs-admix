@@ -16,7 +16,7 @@ ucx:
   compiler:
 singularity: "3.7.2"
 xz: "5.2.4"
-protobuf: "3.11.4"
+#protobuf: "3.11.4"
 llvm: "9.0.1"
 geos: "3.8.1"
 geoslib: "lib"
