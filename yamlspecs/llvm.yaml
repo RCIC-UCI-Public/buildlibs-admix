@@ -7,10 +7,9 @@
   extension: src.tar.xz
   vendor_source: https://github.com/llvm/llvm-project/releases/download/llvmorg-{{version}}/{{name}}-{{version}}.{{extension}}
   description: |
-    LLVM version {{version}}. The LLVM Project is a collection of modular and
-    reusable compiler and toolchain technologies. Despite its name, LLVM
-    has little to do with traditional virtual machines.  The name LLVM
-    itself is not an acronym; it is the full name of the project
+    LLVM Core libraries, part of LLVM Project.
+    Provide a modern source- and target-independent optimizer,
+    along with code generation support for many popular CPUs.
   src_dir: "{{name}}-{{version}}.src"
   build:
     configure: > 

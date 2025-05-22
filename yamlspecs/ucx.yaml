@@ -9,10 +9,13 @@
   compiler: "{{versions.compiler_sys.name}}"
   compiler_version: "{{versions.compiler_sys.version}}"
   description: |
-    Unified Communication X (UCX) version {{version}} provides an optimized communication
+    Unified Communication X (UCX) provides an optimized communication
     layer for Message Passing (MPI), PGAS/OpenSHMEM libraries and RPC/data-centric
     applications. UCX utilizes high-speed networks for inter-node communication, and
     shared memory mechanisms for efficient intra-node communication
+  shortdescription: |
+    Unified Communication X (UCX) provides an optimized communication
+    layer for MPI applications. Configured with {{build.configure_args}}.
   add_config_args: --disable-logging --disable-debug --disable-assertions --disable-params-check
   opts: !ifeq "{{versions.ucx.confargs}},yes,{{add_config_args}},"
   addfile: mpiconfig.sh

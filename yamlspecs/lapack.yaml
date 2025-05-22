@@ -5,12 +5,10 @@
   version: "{{versions.lapack}}"
   vendor_source: https://github.com/Reference-LAPACK/lapack/archive/v{{version}}.{{extension}}
   description: |
-    LAPACK {{version}} is a library of Fortran subroutines for solving
-    the most commonly occurring problems in numerical linear algebra.
-    LAPACK is a freely-available software package. Proper credit should
-    be given to the authors, for example by citing the LAPACK Users' Guide.
-    The license used for the software is the modified BSD license.
-    See http://www.netlib.org/lapack
+    LAPACK - Linear Algebra PACKage. it is a library of Fortran
+    subroutines for solving the most commonly occurring problems
+    in numerical linear algebra. The license used for the software
+    is the modified BSD license. See http://www.netlib.org/lapack.
   build:
     configure: >
       cp make.inc.example make.inc;

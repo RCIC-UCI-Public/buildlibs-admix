@@ -1,6 +1,6 @@
 !include common.yaml
 ---
-- package: fftw 
+- package: fftw
   name: fftw
   version: "{{versions.fftw}}"
   baserpm: "{{name}}_{{version}}_{{compiler}}_{{compiler_version}}"
@@ -8,10 +8,10 @@
   vendor_source: http://www.fftw.org/{{name}}-{{version}}.{{extension}}
   compileopts: "Compiled with gcc {{compiler_version}}"
   description: |
-    FFTW is a C subroutine library for computing the discrete Fourier transform (DFT)
-    in one or more dimensions, of arbitrary input size, and of both real and complex 
+    FFTW is a C subroutine library for computing the Discrete Fourier transform (DFT).
+    The DFT is in one or more dimensions of arbitrary input size, and of both real and complex
     data as well as of even/odd data, i.e. the discrete cosine/sine transforms or DCT/DST.
-    {{compileopts}}
+    {{compileopts}}.
   build:
     baseargs: --enable-shared --enable-fma --enable-sse2 --enable-avx --enable-openmp --enable-threads
     configure: ./configure

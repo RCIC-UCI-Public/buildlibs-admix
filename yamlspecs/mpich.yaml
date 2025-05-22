@@ -11,12 +11,11 @@
   root: "{{parent}}/{{version}}/{{compiler}}/{{compiler_version}}"
   addfile: mpiconfig.sh
   description: |
-      MPICH version {{version}} compiled with UCX {{versions.ucx.version}}.
-      MPICH is a high-performance and widely portable implementation of the
-      MPI-3.1 standard from the Argonne National Laboratory.  This release
-      has all MPI 3.1 functions and features required by the standard with
-      the exception of support for the 'external32' portable I/O format and
-      user-defined data representations for I/O.
+    MPICH is a high performance implementation of
+    the Message Passing Interface (MPI) standard.
+    Compiled with UCX {{versions.ucx.version}}
+    and {{build.configure_args}}.
+  shortdescription: "{{description}}"
   fcflags: FCFLAGS=-fallow-argument-mismatch
   opts: !eval "'{{fcflags}}' if '{{compiler_version}}' == 'system' else ''"
   build:

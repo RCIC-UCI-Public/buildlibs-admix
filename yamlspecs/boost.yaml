@@ -8,12 +8,10 @@
   version_enc: "{{versions.boost_enc}}"
   vendor_source: https://boostorg.jfrog.io/artifactory/main/release/{{version}}/source/boost_{{version_enc}}.{{extension}}
   description: |
-    The Boost version {{version}} project provides free peer-reviewed portable C++
-    source libraries.  We emphasize libraries that work well with the C++ Standard Library.
-    Boost libraries are intended to be widely useful, and usable across a broad spectrum of
-    applications. The Boost license encourages both commercial and non-commercial use and 
-    does not require attribution for binary use. Environment variables
-    BOOST_HOME={{root}}, BOOST_HOME={{root}}
+    The Boost project provides free peer-reviewed portable C++ source libraries.
+    We emphasize libraries that work well with the C++ Standard Library. Boost
+    libraries are intended to be widely useful, and usable across a broad spectrum
+    of applications.
   src_tarball: "{{name}}_{{version_enc}}.{{extension}}"
   src_dir: "{{name}}_{{version_enc}}"
   root: "{{pkg_defaults.app_path}}/{{name}}/{{version}}/{{compiler}}/{{compiler_version}}"

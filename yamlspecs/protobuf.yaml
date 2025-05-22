@@ -5,8 +5,8 @@
   version: "{{versions.protobuf}}"
   vendor_source: https://github.com/protocolbuffers/protobuf/releases/download/v{{version}}/{{name}}-all-{{version}}.{{extension}}
   description: |
-    Protocol Buffers {{version}} - Google's data interchange format 
-    Compiled with {{compiler}} {{compiler_version}}
+    Protocol Buffers - Google's data interchange format.
+    Compiled with {{compiler}} {{compiler_version}}.
   build:
     preconfigure: ./autogen.sh
     configure: ./configure
