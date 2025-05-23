@@ -5,7 +5,7 @@ bootstrap:
 build:
    - mpich
    - mpich-module
-   - fftw-module
+   - fftw
    - fftw-module
 manifest:
    - "{{build}}"
