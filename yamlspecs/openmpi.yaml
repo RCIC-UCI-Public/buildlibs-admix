@@ -16,19 +16,21 @@
       The openmpi is an open source Message Passing Interface implementation.
       Developed and maintained by a consortium of academic, research, and
       industry partners. See https://www.open-mpi.org for details.
-      Compiled with UCX {{ucxversion}} and {{build.configure_args}}.
+      Compiled with UCX {{ucxversion}}, Singularity {{versions.singularity}}, 
+      and configured with - {{build.configure_args_printable}}. 
   shortdescription: |
       The openmpi is an open source Message Passing Interface implementation.
-      Compiled with UCX {{ucxversion}} and {{build.configure_args}}.
+      Compiled with UCX {{ucxversion}}, Singularity {{versions.singularity}} 
   build:
     configure: ../mpiconfig.sh 
-    singularity: !ifeq "{{versions.singularity}},3.4.1,,--with-singularity=$$singularity__PREFIX"
-    configure_args: --prefix={{root}} --with-verbs --with-hwloc=internal {{build.singularity}} --with-ucx={{ucxpath}} --enable-orterun-prefix-by-default
+    singularity: with-singularity=$$singularity__PREFIX
+    configure_args_printable: --prefix={{root}} --with-verbs --with-hwloc=internal --enable-orterun-prefix-by-default
+    configure_args: "{{build.configure_args_printable}} {{build.singularity}} --with-ucx={{ucxpath}}"
     base_modules: 
       - "{{compiler}}/{{compiler_version}}"
     modules: 
       - "{{build.base_modules}}"
-      - !ifeq "{{versions.singularity}},3.4.1,,singularity/{{versions.singularity}}"
+      - singularity/{{versions.singularity}}
       - ucx/{{ucxversion}}/{{ucxcompiler}}
     pkgmake: unset MAKEFLAGS; make -j 8
   install:
