@@ -23,7 +23,7 @@
       Compiled with UCX {{ucxversion}}, Singularity {{versions.singularity}} 
   build:
     configure: ../mpiconfig.sh 
-    singularity: with-singularity=$$singularity__PREFIX
+    singularity: --with-singularity=$$singularity__PREFIX
     configure_args_printable: --prefix={{root}} --with-verbs --with-hwloc=internal --enable-orterun-prefix-by-default
     configure_args: "{{build.configure_args_printable}} {{build.singularity}} --with-ucx={{ucxpath}}"
     base_modules: 
