@@ -1,5 +1,5 @@
 !include versions.yaml
-!include site9.yaml
+!include site97.yaml
 ---
 ucx:
   version: "1.20.0"
@@ -10,16 +10,8 @@ openmpi:
   major: "5.0"
   rel: "1"
   cudaaware: yes
-# updates to site9.yaml
-compiler:
-  version: "15.2.0"
-compiler_intel: 
-  name: "intel"
-  version: "2025.1.0"
-mpi:
-  name: openmpi
-  version: "5.0.9"
-cuda:
-  name: cuda
-  version:  "13.0.1"
+fftw: "3.3.10"
 gdrcopy: "2.5.1"
+geos: "3.14.1"
+libgit2: "1.8.5"
+libgit2lib: "lib64"

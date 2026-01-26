@@ -15,6 +15,10 @@ ls -l RPMS/*/ | grep rpm | awk '{printf "%-15.f %s\n", int($5/100)*100, $9}'
 8400            fftw_3.3.10_gcc_11.2.0-module-3.3.10-1.x86_64.rpm
 1258900         fftw_3.3.10_gcc_11.2.0_openmpi_4.1.2-3.3.10-1.x86_64.rpm
 8700            fftw_3.3.10_gcc_11.2.0_openmpi_4.1.2-module-3.3.10-1.x86_64.rpm
+1194200         fftw_3.3.10_gcc_15.2.0-3.3.10-1.x86_64.rpm
+8400            fftw_3.3.10_gcc_15.2.0-module-3.3.10-1.x86_64.rpm
+1257300         fftw_3.3.10_gcc_15.2.0_openmpi_5.0.9-3.3.10-1.x86_64.rpm
+8700            fftw_3.3.10_gcc_15.2.0_openmpi_5.0.9-module-3.3.10-1.x86_64.rpm
 1177600         fftw_3.3.8_gcc_8.4.0-3.3.8-1.x86_64.rpm
 8400            fftw_3.3.8_gcc_8.4.0-module-3.3.8-1.x86_64.rpm
 1184000         fftw_3.3.8_gcc_system-3.3.8-1.x86_64.rpm
@@ -23,12 +27,16 @@ ls -l RPMS/*/ | grep rpm | awk '{printf "%-15.f %s\n", int($5/100)*100, $9}'
 8100            geos_3.10.2_gcc_11.2.0-module-3.10.2-1.x86_64.rpm
 1545800         geos_3.11.1_gcc_11.2.0-3.11.1-1.x86_64.rpm
 8100            geos_3.11.1_gcc_11.2.0-module-3.11.1-1.x86_64.rpm
+2017600         geos_3.14.1_gcc_15.2.0-3.14.1-1.x86_64.rpm
+8100            geos_3.14.1_gcc_15.2.0-module-3.14.1-1.x86_64.rpm
 1021000         geos_3.8.1_gcc_8.4.0-3.8.1-1.x86_64.rpm
 8100            geos_3.8.1_gcc_8.4.0-module-3.8.1-1.x86_64.rpm
 2825200         lapack_3.9.0-3.9.0-1.x86_64.rpm
 7800            lapack_3.9.0-module-3.9.0-2.x86_64.rpm
 837700          libgit2_1.8.4-1.8.4-1.x86_64.rpm
 7700            libgit2_1.8.4-module-1.8.4-1.x86_64.rpm
+839800          libgit2_1.8.5-1.8.5-1.x86_64.rpm
+7700            libgit2_1.8.5-module-1.8.5-1.x86_64.rpm
 304609500       llvm_11.1.0-11.1.0-10.x86_64.rpm
 7800            llvm_11.1.0-module-11.1.0-3.x86_64.rpm
 363647400       llvm_13.0.0-13.0.0-10.x86_64.rpm

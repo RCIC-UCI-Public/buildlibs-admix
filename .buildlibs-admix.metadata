@@ -37,3 +37,5 @@ c0de2b345b5e4fbc0388cdfd0f977df5fac208a3  sources/llvm-project-18.1.4.src.tar.xz
 f665cca83411efaf9d074455b65101b499e896c4  sources/libgit2-1.8.4.tar.gz
 42da584638c5e884f397e98bca45d416a7a96e8c  sources/ucx-1.20.0.tar.gz
 5a9152f682ad569a67b193d72fbe522de0297bad  sources/openmpi-5.0.9.tar.gz
+1c5f3ca6d099fcedf85e030abbe7e3cc91231a55  sources/geos-3.14.1.tar.bz2
+d893d0fde7e3259f7259fce842fe482623f28ea1  sources/libgit2-1.8.5.tar.gz

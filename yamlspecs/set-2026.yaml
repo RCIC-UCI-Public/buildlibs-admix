@@ -10,6 +10,15 @@ bootstrap:
   - openmpi-module
   - openmpi-cuda
   - openmpi-cuda-module
+build:
+  - geos
+  - geos-module
+  - fftw
+  - fftw-module
+  - fftw-parallel
+  - fftw-parallel-module
+  - libgit2
+  - libgit2-module
 manifest:
    - "{{bootstrap}}"
    - "{{build}}"
