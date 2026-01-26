@@ -1,0 +1,15 @@
+!include packages.yaml
+---
+versions: versions-2026.yaml
+bootstrap:
+  - ucx
+  - ucx-module
+  - ucx-cuda
+  - ucx-cuda-module
+  - openmpi
+  - openmpi-module
+  - openmpi-cuda
+  - openmpi-cuda-module
+manifest:
+   - "{{bootstrap}}"
+   - "{{build}}"
