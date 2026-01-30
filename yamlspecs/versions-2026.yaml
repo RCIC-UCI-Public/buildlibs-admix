@@ -13,5 +13,6 @@ openmpi:
 fftw: "3.3.10"
 gdrcopy: "2.5.1"
 geos: "3.14.1"
+geoslib: lib64
 libgit2: "1.8.5"
 libgit2lib: "lib64"
