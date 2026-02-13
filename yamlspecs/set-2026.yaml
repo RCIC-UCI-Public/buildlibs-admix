@@ -10,7 +10,11 @@ bootstrap:
   - openmpi-module
   - openmpi-cuda
   - openmpi-cuda-module
+  - llvm-project
+  - llvm-project-module
 build:
+  - clang-project
+  - clang-project-module
   - geos
   - geos-module
   - fftw
