@@ -6,7 +6,7 @@
   baserpm: "{{name}}_{{version}}_{{compiler}}_{{compiler_version}}"
   version: "{{versions.boost}}"
   version_enc: "{{versions.boost_enc}}"
-  vendor_source: https://boostorg.jfrog.io/artifactory/main/release/{{version}}/source/boost_{{version_enc}}.{{extension}}
+  vendor_source: "{{versions.boost_urlprefix}}/{{version}}/source/boost_{{version_enc}}.{{extension}}"
   description: |
     The Boost project provides free peer-reviewed portable C++ source libraries.
     We emphasize libraries that work well with the C++ Standard Library. Boost

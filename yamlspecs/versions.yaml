@@ -4,6 +4,7 @@ admix: buildlibs-admix
 fftw: "3.3.8"
 boost: "1.66.0"
 boost_enc: "1_66_0"
+boost_urlprefix: https://boostorg.jfrog.io/artifactory/main/release
 openmpi:
   version: "4.0.3"
   major: "4.0"

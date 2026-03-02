@@ -13,6 +13,8 @@ bootstrap:
   - llvm-project
   - llvm-project-module
 build:
+  - boost
+  - boost-module
   - clang-project
   - clang-project-module
   - geos
