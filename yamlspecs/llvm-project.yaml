@@ -5,6 +5,8 @@
   version: "{{versions.llvm}}" 
   extension: src.tar.xz
   vendor_source: https://github.com/llvm/llvm-project/releases/download/llvmorg-{{version}}/{{name}}-project-{{version}}.{{extension}}
+  compiler: "{{versions.compiler_sys.name}}"
+  compiler_version: "{{versions.compiler_sys.version}}"
   description: |
     LLVM Core libraries (part of LLVM Project).
     Provide a modern source- and target-independent optimizer,
