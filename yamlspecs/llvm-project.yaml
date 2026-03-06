@@ -27,3 +27,5 @@
   extras: README* LICENSE
   install:
     makeinstall: (cd {{name}}/builddir; cmake -DCMAKE_INSTALL_PREFIX=$(ROOT)/{{root}} -DLLVM_INSTALL_UTILS=ON -P cmake_install.cmake) 
+  rpmBuildIdLinks: none
+
