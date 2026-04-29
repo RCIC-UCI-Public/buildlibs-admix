@@ -1,4 +1,0 @@
-!include versions.yaml
----
-geos: "3.11.1"
-geoslib: "lib64"

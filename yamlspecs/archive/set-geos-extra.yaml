@@ -1,9 +1,0 @@
----
-versions: versions-geos-extra.yaml
-bootstrap:
-build:
-  - geos
-  - geos-module
-manifest:
-   - "{{bootstrap}}"
-   - "{{build}}"
