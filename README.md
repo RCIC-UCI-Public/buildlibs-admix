@@ -8,8 +8,8 @@ Various generic libraries that may need updated compilers to build
    is installed via *python3-libs-3.6.8-41.el8.rocky.0.x86_64*.
 
    By default, system python is set to */usr/bin/unversioned-python*
-   Reset to use pytohn 3.6 via an interactive command and choosing
-   an option for python3 in themenu:
+   Reset to use python 3.6 via an interactive command and choosing
+   an option for python3 in the menu:
 
    ```bash
    alternatives --config python
