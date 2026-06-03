@@ -21,3 +21,4 @@ llvm: "20.1.8"
 boost: "1.90.0"
 boost_enc: "1_90_0"
 boost_urlprefix: https://archives.boost.io/release
+boost_opts10:

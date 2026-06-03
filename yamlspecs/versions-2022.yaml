@@ -3,4 +3,5 @@
 llvm: "11.1.0"
 boost: "1.78.0"
 boost_enc: "1_78_0"
+boost_opts10:
 mpich: "3.3.2"

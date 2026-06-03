@@ -5,6 +5,7 @@ fftw: "3.3.8"
 boost: "1.66.0"
 boost_enc: "1_66_0"
 boost_urlprefix: https://boostorg.jfrog.io/artifactory/main/release
+boost_opts10: cxxflags="-std=c++14" cflags="-std=c++14"
 openmpi:
   version: "4.0.3"
   major: "4.0"

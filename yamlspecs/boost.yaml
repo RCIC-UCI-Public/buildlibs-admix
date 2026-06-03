@@ -15,16 +15,18 @@
   src_tarball: "{{name}}_{{version_enc}}.{{extension}}"
   src_dir: "{{name}}_{{version_enc}}"
   root: "{{pkg_defaults.app_path}}/{{name}}/{{version}}/{{compiler}}/{{compiler_version}}"
+  opts10: !eval "'{{versions.boost_opts10}}' if {{versions.os_release}} >= 10 else ''"
   build:
+    patchfile: !eval "'{{name}}.{{version}}.patch' if {{versions.os_release}} >= 10 else ''"
     configure: ./bootstrap.sh 
     configure_args: 
     modules:
        - "{{mpi}}/{{mpi_version}}/{{compiler}}.{{compiler_version}}"
     pkgmake: >
        echo "using mpi ;" >> project-config.jam;
-       ./b2
+       ./b2 {{opts10}}
   install:
     makeinstall: >
-      ./b2 --prefix=$(ROOT)/{{root}} install;
+      ./b2 {{opts10}} --prefix=$(ROOT)/{{root}} install;
       for t in $$(find $(ROOT) -type f -exec grep -q '$(ROOT)' {} \; -print); 
       do echo $$t; sed -i -e 's%$(ROOT)%%g' $$t; done
