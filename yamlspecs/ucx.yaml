@@ -1,4 +1,5 @@
 !include rcic-package.yaml
+!include rpm.yaml
 ---
 - package: ucx 
   name: ucx
@@ -6,8 +7,8 @@
   version: "{{versions.ucx.version}}"
   release: "{{versions.ucx.rel}}"
   vendor_source: https://github.com/openucx/ucx/archive/v{{version}}.{{extension}}
-  compiler: "{{versions.compiler_sys.name}}"
-  compiler_version: "{{versions.compiler_sys.version}}"
+  compiler: "{{versions.ucx.compiler}}"
+  compiler_version: "{{versions.ucx.compiler_ver}}"
   description: |
     Unified Communication X (UCX) provides an optimized communication
     layer for Message Passing (MPI), PGAS/OpenSHMEM libraries and RPC/data-centric
@@ -20,10 +21,10 @@
   opts: !ifeq "{{versions.ucx.confargs}},yes,{{add_config_args}},"
   addfile: mpiconfig.sh
   build:
+    # if using system compiler no need to load its module
+    modules: !ifeq "{{versions.ucx.compiler_ver}},system,,{{versions.ucx.compiler}}/{{versions.ucx.compiler_ver}}"
     preconfigure: ./autogen.sh
-    ## Need an older compiler to build version 1.8.0
-    ucxcompiler: !ifeq "{{version}},1.8.0,module load {{versions.ucx.compiler}};,"
-    configure: "{{build.ucxcompiler}} CFLAGS='-fPIC' ../mpiconfig.sh"
+    configure: CFLAGS='-fPIC' ../mpiconfig.sh
     configure_args: >   
        --prefix={{root}}
        --with-rc
@@ -36,6 +37,6 @@
     makeinstall: $(MAKE) DESTDIR=$(ROOT) install
 
 # NOTE: additional parameters are from <distro>/contrib/configure-release
-# With OpenMPI 4.0 and above, there could be compilation errors from “btl_uct” component.
+# With OpenMPI 4.0 and above, there could be compilation errors from btl_uct component.
 # This component is not critical for using UCX; so it could be disabled with
 # --enable-mca-no-build=btl-uct

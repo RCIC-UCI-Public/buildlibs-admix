@@ -12,6 +12,7 @@ ucx:
   version: "1.15.0"
   rel: "1"
   confargs: yes
+  compiler_ver: system
 gdrcopy: "2.4.1"
 openmpi:
   version: "5.0.1"

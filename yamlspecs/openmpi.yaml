@@ -6,7 +6,7 @@
   baserpm: "{{name}}_{{version}}_{{compiler}}_{{compiler_version}}"
   version: "{{versions.openmpi.version}}"
   ucxversion: "{{versions.ucx.version}}"
-  ucxcompiler: "{{versions.compiler_sys.name}}.{{versions.compiler_sys.version}}"
+  ucxcompiler: "{{versions.ucx.compiler}}.{{versions.ucx.compiler_ver}}"
   version_major: "{{versions.openmpi.major}}"
   vendor_source: https://download.open-mpi.org/release/open-mpi/v{{version_major}}/{{name}}-{{version}}.{{extension}}
   ucxpath: "$$UCX_DIR"

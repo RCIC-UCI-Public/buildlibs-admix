@@ -11,7 +11,7 @@ system:
   - automake
   - bzip2-devel
 bootstrap:
-  - ucx
+  - !eval "'ucx' if {{site.os_release}} <= 9 else 'ucx-patched'"
   - ucx-module
 build:
 manifest:

@@ -1,0 +1,10 @@
+# This is for older ucx 1.8.0 and 1.12.0 on Rocky 10
+# patch source (sed) and add configure args and CFLAGS to get to compile
+!include ucx.yaml
+---
+- build:
+    preconfigure: >
+      ./autogen.sh;
+      sed -i 's/unsigned advice/uct_mem_advice_t advice/g' src/uct/base/uct_md.c;
+      sed -i '1i \#include <stdint.h>' test/apps/sockaddr/sa_util.h
+    configure: ac_cv_header_bfd_h=no CFLAGS='-fPIC -Wno-error=array-bounds -Wno-error=stringop-overflow -DPTR=void*' ../mpiconfig.sh

@@ -14,7 +14,8 @@ ucx:
   version: "1.12.0"
   rel: "2"
   confargs:
-  compiler:
+  compiler: "gcc"
+  compiler_ver: "11.2.0"
 singularity: "3.7.2"
 xz: "5.2.4"
 #protobuf: "3.11.4"

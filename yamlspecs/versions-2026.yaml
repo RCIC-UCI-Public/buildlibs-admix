@@ -5,6 +5,7 @@ ucx:
   version: "1.20.0"
   rel: "1"
   confargs: yes
+  compiler_ver: system
 openmpi:
   version: "5.0.9"
   major: "5.0"

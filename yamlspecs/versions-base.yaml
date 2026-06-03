@@ -4,5 +4,5 @@ ucx:
   version: "1.8.0"
   rel: "2"
   confargs:
-  compiler: "gcc/8.4.0"
+  compiler_ver: "8.4.0"
 
