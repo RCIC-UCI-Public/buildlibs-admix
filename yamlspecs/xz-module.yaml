@@ -1,6 +1,0 @@
-!include xz.yaml
-!include rcic-module.yaml
----
-- package: xz module
-  category: TOOLS
-  release: 2
