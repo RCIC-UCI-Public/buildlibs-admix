@@ -18,9 +18,10 @@
   shortdescription: "{{description}}"
   fcflags: FCFLAGS=-fallow-argument-mismatch
   opts: !eval "'{{fcflags}}' if '{{compiler_version}}' == 'system' else ''"
+  opts10: !eval "'{{versions.mpich_opts10}}' if '{{versions.os_release}} >=10' else ''"
   build:
     configure: ../mpiconfig.sh 
-    configure_args: --prefix={{root}} --with-verbs --with-hwloc=embedded --enable-romio --with-ucx={{ucxpath}} {{opts}}
+    configure_args: --prefix={{root}} --with-verbs --with-hwloc=embedded --enable-romio --with-ucx={{ucxpath}} {{opts}} {{opts10}}
     pkgmake: unset MAKEFLAGS; make -j 8
   install:
     makeinstall: unset F90; unset MAKEFLAGS; $(MAKE) DESTDIR=$(ROOT) install

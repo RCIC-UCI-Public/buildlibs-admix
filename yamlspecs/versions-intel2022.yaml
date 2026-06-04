@@ -8,6 +8,7 @@ ucx:
   rel: "2"
   confargs:
 mpich: "4.0"
+mpich_opts10: CXX=icpx
 openmpi:
   version: "4.1.2"
   major: "4.1"
