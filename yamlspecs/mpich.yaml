@@ -18,7 +18,7 @@
   shortdescription: "{{description}}"
   fcflags: FCFLAGS=-fallow-argument-mismatch
   opts: !eval "'{{fcflags}}' if '{{compiler_version}}' == 'system' else ''"
-  opts10: !eval "'{{versions.mpich_opts10}}' if '{{versions.os_release}} >=10' else ''"
+  opts10: !OScmp ">=, 10, {{versions.mpich_opts10}},"
   build:
     configure: ../mpiconfig.sh 
     configure_args: --prefix={{root}} --with-verbs --with-hwloc=embedded --enable-romio --with-ucx={{ucxpath}} {{opts}} {{opts10}}
