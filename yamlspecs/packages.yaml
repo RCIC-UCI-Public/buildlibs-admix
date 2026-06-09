@@ -11,7 +11,7 @@ system:
   - automake
   - bzip2-devel
 bootstrap:
-  - !eval "'ucx' if {{site.os_release}} <= 9 else 'ucx-patched'"
+  - !OScmp "<=, 9, ucx, ucx-patched"
   - ucx-module
 build:
 manifest:
@@ -23,7 +23,7 @@ sets:
   - system
   - gcc6
   - gcc8
-  - !eval "'intel2020' if {{site.os_release}} <= 8 else ''"
+  - !OScmp "<=,8,intel2020,"
   - intel2022
   - "2022"
   - "2023"

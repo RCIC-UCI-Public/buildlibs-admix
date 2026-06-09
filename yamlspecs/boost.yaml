@@ -15,9 +15,9 @@
   src_tarball: "{{name}}_{{version_enc}}.{{extension}}"
   src_dir: "{{name}}_{{version_enc}}"
   root: "{{pkg_defaults.app_path}}/{{name}}/{{version}}/{{compiler}}/{{compiler_version}}"
-  opts10: !eval "'{{versions.boost_opts10}}' if {{versions.os_release}} >= 10 else ''"
+  opts10: !OScmp ">=,10,{{versions.boost_opts10}},"
   build:
-    patchfile: !eval "'{{name}}.{{version}}.patch' if {{versions.os_release}} >= 10 else ''"
+    patchfile: !OScmp ">=,10,{{name}}.{{version}}.patch,"
     configure: ./bootstrap.sh 
     configure_args: 
     modules:
