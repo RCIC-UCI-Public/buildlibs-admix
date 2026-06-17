@@ -10,7 +10,7 @@ system:
   - automake
   - bzip2-devel
 bootstrap:
-  - !OScmp "<=, 9, ucx, ucx-patched"
+  - !OScmp "<, 10, ucx, ucx-patched"
   - ucx-module
 build:
 manifest:
