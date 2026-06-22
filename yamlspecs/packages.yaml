@@ -22,7 +22,6 @@ sets:
   - system
   - gcc6
   - gcc8
-  - !OScmp "<=,8,intel2020,"
   - intel2022
   - "2022"
   - "2023"
