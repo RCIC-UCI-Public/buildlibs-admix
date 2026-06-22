@@ -1,0 +1,35 @@
+!include rcic-package.yaml
+!include rpm.yaml
+---
+- package: icu
+  name: icu
+  root: "{{parent}}/{{version}}/{{compiler}}.{{compiler_version}}"
+  baserpm: "{{name}}_{{version}}_{{compiler}}_{{compiler_version}}"
+  versions: !include versions.yaml
+  version: "{{versions.icu.version}}"
+  compiler: "{{versions.compiler.name}}"
+  compiler_version: "{{versions.compiler.version}}"
+  extension: tgz
+  vendor_source: https://github.com/unicode-org/icu/releases/download/{{versions.icu.rel}}/{{versions.icu.distro}}
+  src_dir: "{{name}}"
+  description: |
+    ICU {{version}} is the premier library for software internationalization,
+    used by a wide array of companies and organizations
+  build:
+    configure_args: >
+      --prefix={{root}}
+      --enable-shared
+      --disable-static
+    configure: cd source; unset CPPFLAGS CFLAGS CXXFLAGS PKG_CONFIG_PATH CPATH; ./configure 
+    base_modules:
+      - "{{compiler}}/{{compiler_version}}"
+    modules:
+      - cmake/{{versions.cmake}}
+      - python/{{versions.icu.python}}
+      - "{{build.base_modules}}"
+    pkgmake: make -j 8 
+  install:
+    makeinstall: cd source; $(MAKE) DESTDIR=$(ROOT) install
+
+# This package is needed on OS 10 when compiling
+# stringi modules for older versions of R. 

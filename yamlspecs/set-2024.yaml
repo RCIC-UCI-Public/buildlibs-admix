@@ -19,6 +19,8 @@ build:
   - geos-module
   - libgit2
   - libgit2-module
+  - !OScmp ">=,10,icu,"
+  - !OScmp ">=,10,icu-module,"
 manifest:
    - "{{bootstrap}}"
    - "{{build}}"

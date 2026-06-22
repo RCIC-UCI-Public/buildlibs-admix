@@ -1,0 +1,9 @@
+!include icu.yaml
+!include rcic-module.yaml
+---
+- package: icu module
+  category: LIBRARIES
+  module:
+    <<: *ModuleCompiler
+    prereq:
+      - "{{compiler}}/{{compiler_version}}"
